@@ -24,3 +24,21 @@ models:
     example:
       +materialized: view
       +schema: example
+    recursos_humanos_ergon:
+      +materialized: table
+      +schema: recursos_humanos_ergon
+    recursos_humanos_ergon_comlurb:
+      +materialized: table
+      +schema: recursos_humanos_ergon_comlurb
+    planejamento_gestao_acordo_resultados:
+      +materialized: table
+      +schema: planejamento_gestao_acordo_resultados
+    planejamento_gestao_dashboard_metas:
+      +materialized: table
+      +schema: planejamento_gestao_dashboard_metas
+    iptu_inadimplentes:
+      +materialized: table
+      +schema: iptu_inadimplentes
+    adm_orcamento_sigma:
+      +materialized: table
+      +schema: adm_orcamento_sigma
