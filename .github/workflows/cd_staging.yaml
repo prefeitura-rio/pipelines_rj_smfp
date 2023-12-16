@@ -70,7 +70,6 @@ jobs:
           check-name: 'Build Docker image'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           verbose: true
-          allowed-conclusions: success
 
       - name: Register Prefect flows
         run: |-
