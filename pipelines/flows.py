@@ -8,3 +8,4 @@ from pipelines.ergon_comlurb import *  # noqa
 from pipelines.exemplo import *  # noqa
 from pipelines.iptu_inad import *  # noqa
 from pipelines.sigma import *  # noqa
+from pipelines.templates import *  # noqa
