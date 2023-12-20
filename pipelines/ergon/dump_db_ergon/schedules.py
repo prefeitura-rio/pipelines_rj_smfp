@@ -321,7 +321,7 @@ ergon_clocks = generate_dump_db_schedules(
     db_port="1526",
     db_type="oracle",
     dataset_id="recursos_humanos_ergon",
-    vault_secret_path="ergon-prod",
+    infisical_secret_path="/db-ergon-prod",
     table_parameters=ergon_queries,
 )
 

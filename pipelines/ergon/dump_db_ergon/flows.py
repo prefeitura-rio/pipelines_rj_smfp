@@ -30,7 +30,7 @@ ergon_default_parameters = {
     "db_host": "10.70.6.21",
     "db_port": "1526",
     "db_type": "oracle",
-    "vault_secret_path": "ergon-prod",
+    "infisical_secret_path": "/db-ergon-prod",
     "dataset_id": "recursos_humanos_ergon",
 }
 dump_sql_ergon_flow = set_default_parameters(
