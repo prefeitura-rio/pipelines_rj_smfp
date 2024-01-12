@@ -1,8 +1,6 @@
 {{
     config(
-        alias='fita_banco',
-        schema='recursos_humanos_ergon',
-        materialized='incremental',
+        materialized='table',
         partition_by={
             "field": "data_particao",
             "data_type": "date",
@@ -44,15 +42,15 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(flex_campo_05, r'\.0$', '') AS STRING) AS flex_campo_05,
     SAFE_CAST(REGEXP_REPLACE(jornada, r'\.0$', '') AS STRING) AS jornada,
     SAFE_CAST(data_particao AS DATE) data_particao,
-    FROM rj-smfp.recursos_humanos_ergon_staging.fita_banco AS t
-WHERE
-    SAFE_CAST(data_particao AS DATE) < CURRENT_DATE('America/Sao_Paulo')
+FROM rj-smfp.recursos_humanos_ergon_staging.fita_banco AS t
+-- WHERE
+--     SAFE_CAST(data_particao AS DATE) < CURRENT_DATE('America/Sao_Paulo')
 
-{% if is_incremental() %}
+-- {% if is_incremental() %}
 
-{% set max_partition = run_query("SELECT gr FROM (SELECT IF(max(data_particao) > CURRENT_DATE('America/Sao_Paulo'), CURRENT_DATE('America/Sao_Paulo'), max(data_particao)) as gr FROM " ~ this ~ ")").columns[0].values()[0] %}
+-- {% set max_partition = run_query("SELECT gr FROM (SELECT IF(max(data_particao) > CURRENT_DATE('America/Sao_Paulo'), CURRENT_DATE('America/Sao_Paulo'), max(data_particao)) as gr FROM " ~ this ~ ")").columns[0].values()[0] %}
 
-AND
-    SAFE_CAST(data_particao AS DATE) > ("{{ max_partition }}")
+-- AND
+--     SAFE_CAST(data_particao AS DATE) > ("{{ max_partition }}")
 
-{% endif %}
+-- {% endif %}
