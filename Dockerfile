@@ -17,6 +17,12 @@ RUN apt-get update && \
 # Start Python image
 FROM python:${PYTHON_VERSION}
 
+# Install git
+RUN apt-get update && \
+    apt-get install -y git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Setting environment with prefect version
 ARG PREFECT_VERSION=1.4.1
 ENV PREFECT_VERSION $PREFECT_VERSION
