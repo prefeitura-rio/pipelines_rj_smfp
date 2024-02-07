@@ -32,7 +32,7 @@ egpweb_default_parameters = {
     "db_host": "10.2.221.101",
     "db_port": "1433",
     "db_type": "sql_server",
-    "vault_secret_path": "egpweb-prod",
+    "infisical_secret_path": "/db-egpweb-prod",
     "materialization_mode": "prod",
     "dataset_id": "planejamento_gestao_acordo_resultados",
     "materialize_to_datario": False,
