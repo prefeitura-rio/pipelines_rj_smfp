@@ -480,7 +480,7 @@ sigma_infra_clocks = generate_dump_db_schedules(
     db_port="1521",
     db_type="oracle",
     dataset_id="compras_materiais_servicos_sigma",
-    vault_secret_path="db-sigma",
+    infisical_secret_path="/db-sigma",
     table_parameters=_sigma_queries,
 )
 

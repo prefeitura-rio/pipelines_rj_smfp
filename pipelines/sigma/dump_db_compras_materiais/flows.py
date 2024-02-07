@@ -36,7 +36,7 @@ rj_smfp_dump_db_sigma_medicamentos_default_parameters = {
     "db_port": "1521",
     "db_type": "oracle",
     "dataset_id": "compras_materiais_servicos_sigma",
-    "vault_secret_path": "db-sigma",
+    "infisical_secret_path": "/db-sigma",
 }
 
 rj_smfp_dump_db_sigma_medicamentos_flow = set_default_parameters(
