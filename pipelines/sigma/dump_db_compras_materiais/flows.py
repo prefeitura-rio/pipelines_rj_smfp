@@ -19,7 +19,7 @@ from pipelines.sigma.dump_db_compras_materiais.schedules import (
 rj_smfp_dump_db_sigma_medicamentos_flow = deepcopy(dump_sql_flow)
 rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [handler_inject_bd_credentials]
 rj_smfp_dump_db_sigma_medicamentos_flow.name = (
-    "SMFP: COMPRAS MATERIAIS SERVICOS SIGMA - Ingerir tabelas de banco SQL"
+    "SMFP: SIGMA - Compras Materiais Serviços - Ingerir tabelas de banco SQL"
 )
 rj_smfp_dump_db_sigma_medicamentos_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 
