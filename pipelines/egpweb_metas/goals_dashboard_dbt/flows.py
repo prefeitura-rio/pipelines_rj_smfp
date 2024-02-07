@@ -19,7 +19,7 @@ from pipelines.egpweb_metas.goals_dashboard_dbt.schedules import (
 )
 
 run_dbt_smfp_dashboard_metas_flow = deepcopy(templates__run_dbt_model__flow)
-run_dbt_smfp_dashboard_metas_flow.name = "SMFP: Dashboard de Metas - Materializar tabelas"
+run_dbt_smfp_dashboard_metas_flow.name = "SMFP: EGPWeb Dashboard de Metas - Materializar tabelas"
 run_dbt_smfp_dashboard_metas_flow.state_handlers = [handler_inject_bd_credentials]
 run_dbt_smfp_dashboard_metas_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 run_dbt_smfp_dashboard_metas_flow.run_config = KubernetesRun(image=constants.DOCKER_IMAGE.value)
