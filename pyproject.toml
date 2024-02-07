@@ -15,7 +15,6 @@ prefeitura-rio = { git = "https://github.com/prefeitura-rio/prefeitura-rio", rev
 ] }
 pendulum = "^3.0.0"
 
-
 [tool.poetry.group.dev]
 optional = true
 
