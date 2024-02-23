@@ -9,7 +9,10 @@ from prefect.run_configs import KubernetesRun
 from prefect.storage import GCS
 from prefeitura_rio.pipelines_templates.dump_db.flows import flow as dump_sql_flow
 from prefeitura_rio.pipelines_utils.prefect import set_default_parameters
-from prefeitura_rio.pipelines_utils.state_handlers import handler_inject_bd_credentials
+from prefeitura_rio.pipelines_utils.state_handlers import (
+    handler_initialize_sentry,
+    handler_inject_bd_credentials,
+)
 
 from pipelines.constants import constants
 from pipelines.sigma.dump_db_compras_materiais.schedules import (
@@ -17,7 +20,10 @@ from pipelines.sigma.dump_db_compras_materiais.schedules import (
 )
 
 rj_smfp_dump_db_sigma_medicamentos_flow = deepcopy(dump_sql_flow)
-rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [handler_inject_bd_credentials]
+rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [
+    handler_inject_bd_credentials,
+    handler_initialize_sentry,
+]
 rj_smfp_dump_db_sigma_medicamentos_flow.name = (
     "SMFP: SIGMA - Compras Materiais Serviços - Ingerir tabelas de banco SQL"
 )

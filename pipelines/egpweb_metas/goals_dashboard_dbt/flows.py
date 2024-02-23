@@ -11,7 +11,10 @@ from prefeitura_rio.pipelines_templates.run_dbt_model.flows import (
     templates__run_dbt_model__flow,
 )
 from prefeitura_rio.pipelines_utils.prefect import set_default_parameters
-from prefeitura_rio.pipelines_utils.state_handlers import handler_inject_bd_credentials
+from prefeitura_rio.pipelines_utils.state_handlers import (
+    handler_initialize_sentry,
+    handler_inject_bd_credentials,
+)
 
 from pipelines.constants import constants
 from pipelines.egpweb_metas.goals_dashboard_dbt.schedules import (
@@ -20,7 +23,10 @@ from pipelines.egpweb_metas.goals_dashboard_dbt.schedules import (
 
 run_dbt_smfp_dashboard_metas_flow = deepcopy(templates__run_dbt_model__flow)
 run_dbt_smfp_dashboard_metas_flow.name = "SMFP: EGPWeb Dashboard de Metas - Materializar tabelas"
-run_dbt_smfp_dashboard_metas_flow.state_handlers = [handler_inject_bd_credentials]
+run_dbt_smfp_dashboard_metas_flow.state_handlers = [
+    handler_inject_bd_credentials,
+    handler_initialize_sentry,
+]
 run_dbt_smfp_dashboard_metas_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 run_dbt_smfp_dashboard_metas_flow.run_config = KubernetesRun(image=constants.DOCKER_IMAGE.value)
 

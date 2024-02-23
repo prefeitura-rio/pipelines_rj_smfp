@@ -9,7 +9,10 @@ from prefect.run_configs import KubernetesRun
 from prefect.storage import GCS
 from prefeitura_rio.pipelines_templates.dump_db.flows import flow as dump_sql_flow
 from prefeitura_rio.pipelines_utils.prefect import set_default_parameters
-from prefeitura_rio.pipelines_utils.state_handlers import handler_inject_bd_credentials
+from prefeitura_rio.pipelines_utils.state_handlers import (
+    handler_initialize_sentry,
+    handler_inject_bd_credentials,
+)
 
 from pipelines.constants import constants
 from pipelines.ergon_comlurb.dump_db_ergon_comlurb.schedules import (
@@ -18,7 +21,7 @@ from pipelines.ergon_comlurb.dump_db_ergon_comlurb.schedules import (
 
 dump_ergon_flow = deepcopy(dump_sql_flow)
 dump_ergon_flow.name = "SMFP: ergon comlurb - Ingerir tabelas de banco SQL"
-dump_ergon_flow.state_handlers = [handler_inject_bd_credentials]
+dump_ergon_flow.state_handlers = [handler_inject_bd_credentials, handler_initialize_sentry]
 dump_ergon_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 dump_ergon_flow.run_config = KubernetesRun(
     image=constants.DOCKER_IMAGE.value,

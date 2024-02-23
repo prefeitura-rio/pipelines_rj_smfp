@@ -9,7 +9,10 @@ from prefect.run_configs import KubernetesRun
 from prefect.storage import GCS
 from prefeitura_rio.pipelines_templates.dump_db.flows import flow as dump_sql_flow
 from prefeitura_rio.pipelines_utils.prefect import set_default_parameters
-from prefeitura_rio.pipelines_utils.state_handlers import handler_inject_bd_credentials
+from prefeitura_rio.pipelines_utils.state_handlers import (
+    handler_initialize_sentry,
+    handler_inject_bd_credentials,
+)
 
 from pipelines.constants import constants
 from pipelines.egpweb_metas.dump_db_metas.schedules import (
@@ -18,7 +21,7 @@ from pipelines.egpweb_metas.dump_db_metas.schedules import (
 
 smfp_egpweb_flow = deepcopy(dump_sql_flow)
 smfp_egpweb_flow.name = "SMFP: EGPWeb - Ingerir tabelas de banco SQL"
-smfp_egpweb_flow.state_handlers = [handler_inject_bd_credentials]
+smfp_egpweb_flow.state_handlers = [handler_inject_bd_credentials, handler_initialize_sentry]
 smfp_egpweb_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 smfp_egpweb_flow.run_config = KubernetesRun(
     image=constants.DOCKER_IMAGE.value,
