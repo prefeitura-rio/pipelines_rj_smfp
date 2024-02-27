@@ -9,9 +9,10 @@ python = ">=3.10,<3.11"
 dbt-bigquery = "^1.6.1"
 google-cloud-storage = "^2.10.0"
 prefect = "1.4.1"
-prefeitura-rio = { git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "ae8548d685babbb97ea626d434a0dd0758ee5432", extras = [
+prefeitura-rio = { git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "45af7285bfbbdc99eb6c0dc8fa3dfa54cf52a615", extras = [
     "pipelines",
     "pipelines-templates",
+    "actions"
 ] }
 pendulum = "^3.0.0"
 
