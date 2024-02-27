@@ -15,7 +15,7 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
 )
 
 from pipelines.constants import constants
-from pipelines.fincon.dump_db_fincon.schedules import fincon_infra_clocks
+from pipelines.fincon.dump_db_fincon.schedules import fincon_daily_update_schedule
 
 rj_smfp_dump_db_fincon_flow = deepcopy(dump_sql_flow)
 rj_smfp_dump_db_fincon_flow.state_handlers = [
@@ -48,4 +48,4 @@ rj_smfp_dump_db_fincon_flow = set_default_parameters(
     default_parameters=rj_smfp_dump_db_fincon_default_parameters,
 )
 
-rj_smfp_dump_db_fincon_flow.schedule = fincon_infra_clocks
+rj_smfp_dump_db_fincon_flow.schedule = fincon_daily_update_schedule

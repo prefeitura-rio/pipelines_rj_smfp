@@ -70,4 +70,4 @@ fincon_infra_clocks = generate_dump_db_schedules(
     table_parameters=_fincon_queries,
 )
 
-compras_fincon_daily_update_schedule = Schedule(clocks=untuple(fincon_infra_clocks))
+fincon_daily_update_schedule = Schedule(clocks=untuple(fincon_infra_clocks))
