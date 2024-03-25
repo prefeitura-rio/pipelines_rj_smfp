@@ -45,3 +45,6 @@ models:
     adm_instrumentos_firmados:
       +materialized: table
       +schema: adm_instrumentos_firmados
+    compras_materiais_servicos_sigma:
+      +materialized: table
+      +schema: compras_materiais_servicos_sigma
