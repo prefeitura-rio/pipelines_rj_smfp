@@ -40,7 +40,7 @@ models :
       - name: id_subgrupo_cae
         description: Subgrupo de Atividade Econômica. Faz parte do Código de Atividade
           Econômica
-      - name: id_atividade_econômica
+      - name: id_atividade_economica
         description: Atividade Econômica. Incluído no código da atividade econômica
       - name: descricao_atividade_economica
         description: Descrição da Atividade Econômica
@@ -83,7 +83,7 @@ models :
         description: DATA DO TERMO DE RESPONSABILIDADE
       - name: data_excepecionalidade
         description: DATA DA EXCEPCIONALIDADE
-      - name: data_publicacao_designação
+      - name: data_publicacao_designacao
         description: DATA DA PUBLICAÇÃO DA DESIGNAÇÃO
       - name: escolaridade
         description: ESCOLARIDADE
@@ -148,7 +148,7 @@ models :
       - name: descricao_detalhada
         description: Descrição detalhada do material (São 06 campos com 78 caracteres
           cada um)
-      - name: data_desativação
+      - name: data_desativacao
         description: Data da Desativação
       - name: status_material
         description: Indica material Ativo ou Desativado

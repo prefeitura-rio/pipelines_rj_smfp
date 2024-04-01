@@ -1,3 +1,4 @@
+-- TODO: did not materialize
 SELECT
     SAFE_CAST(TRIM(complemento) AS STRING) AS complemento_endereco,
     SAFE_CAST(TRIM(cpf_cnpj) AS STRING) AS cpf_cnpj,

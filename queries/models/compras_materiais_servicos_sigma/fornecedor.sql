@@ -6,7 +6,7 @@ SELECT
     SAFE_CAST(TRIM(cep) AS STRING) AS cep,
     SAFE_CAST(TRIM(complemento) AS STRING) AS complemento_endereco,
     SAFE_CAST(TRIM(cpf_cnpj) AS STRING) AS cpf_cnpj,
-    SAFE_CAST(DATE(data_ultima_atualizacao) AS DATE) AS data_ultima_atualizacao,
+    SAFE.PARSE_DATE("%Y%m%d",REGEXP_REPLACE(TRIM(data_ultima_atualizacao), r'\.0$', '')) as data_ultima_atualizacao,
     SAFE_CAST(TRIM(ddd) AS STRING) AS ddd,
     SAFE_CAST(TRIM(ddi) AS STRING) AS ddi,
     SAFE_CAST(TRIM(ds_natureza_juridica) AS STRING) AS descricao_natureza_juridica,

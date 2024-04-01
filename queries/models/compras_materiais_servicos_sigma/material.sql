@@ -7,7 +7,7 @@ SELECT
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_material_substituto), r'\.0$', '') AS STRING) AS id_material_substituto,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_subclasse), r'\.0$', '') AS STRING) AS id_subclasse,
     SAFE_CAST(TRIM(ds_detalhe_material) AS STRING) AS descricao_detalhada ,
-    SAFE_CAST(DATE(dt_desativacao) AS DATE) AS data_desativação,
+    SAFE.PARSE_DATE("%Y%m%d",REGEXP_REPLACE(TRIM(dt_desativacao), r'\.0$', '')) as data_desativacao,
     SAFE_CAST(TRIM(dv1) AS STRING) AS digito_verificador_1,
     SAFE_CAST(TRIM(dv2) AS STRING) AS digito_verificador_2,
     SAFE_CAST(TRIM(nm_complementar_material) AS STRING) AS nome_complementar_material,
