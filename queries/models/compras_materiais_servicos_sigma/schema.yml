@@ -31,7 +31,7 @@ models :
         description: Necessita responsável Técnico
       - name: registro_preco
         description: Se está no sistema de registro de Preço
-      - name: id_atividade_economica
+      - name: id_atividade_cae
         description: Código de Atividade Econômica. Composto por grupo, subgrupo e
           atividade
       - name: id_grupo_cae
