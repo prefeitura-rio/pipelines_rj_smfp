@@ -1,7 +1,7 @@
 SELECT
-    SAFE_CAST(REGEXP_REPLACE(TRIM(cd_atividade_cae), r'\.0$', '') AS STRING) AS id_atividade_economica,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_atividade_economica), r'\.0$', '') AS STRING) AS id_atividade_economica,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_comprasnet), r'\.0$', '') AS STRING) AS id_compras_net,
+    SAFE_CAST(REGEXP_REPLACE(TRIM(cd_atividade_cae), r'\.0$', '') AS STRING) AS id_atividade_cae,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_grupo_cae), r'\.0$', '') AS STRING) AS id_grupo_cae,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_seq), r'\.0$', '') AS STRING) AS id_sequencia,
     SAFE_CAST(REGEXP_REPLACE(TRIM(cd_serv), r'\.0$', '') AS STRING) AS id_servico,
