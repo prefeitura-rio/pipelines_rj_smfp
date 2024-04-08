@@ -40,34 +40,12 @@ _sigma_queries = {
         "dump_mode": "overwrite",
         "execute_query": """
             SELECT
-                CPF_CNPJ,
-                TIPO_CPF_CNPJ,
-                INSCRICAO_MUNICIPAL,
-                INSCRICAO_ESTADUAL,
-                RAZAO_SOCIAL,
-                NOME_FANTASIA,
-                NOME_CONTATO,
-                EMAIL,
-                EMAIL_CONTATO,
-                FAX,
-                DDD,
-                DDI,
-                RAMAL,
-                TELEFONE,
-                LOGRADOURO,
-                NUMERO_PORTA,
-                COMPLEMENTO,
-                BAIRRO,
-                MUNICIPIO,
-                UF,
-                CEP,
-                ATIVO_INATIVO_BLOQUEADO,
-                CD_NATUREZA_JURIDICA,
-                DS_NATUREZA_JURIDICA,
-                RAMO_ATIVIDADE,
-                CD_PORTE_EMPRESA,
-                DATA_ULTIMA_ATUALIZACAO,
-                FORNECEDOR_EVENTUAL
+                CPF_CNPJ, TIPO_CPF_CNPJ, INSCRICAO_MUNICIPAL, INSCRICAO_ESTADUAL,
+                RAZAO_SOCIAL, NOME_FANTASIA, NOME_CONTATO, EMAIL, EMAIL_CONTATO,
+                FAX, DDD, DDI, RAMAL, TELEFONE, LOGRADOURO, NUMERO_PORTA, COMPLEMENTO,
+                BAIRRO, MUNICIPIO, UF, CEP, ATIVO_INATIVO_BLOQUEADO, CD_NATUREZA_JURIDICA,
+                DS_NATUREZA_JURIDICA, CD_RAMO_ATIVIDADE, DS_RAMO_ATIVIDADE, CD_PORTE_EMPRESA,
+                DATA_ULTIMA_ATUALIZACAO, TIPO_FORNECEDOR
             FROM SIGMA.VW_FORNECEDOR
         """,  # noqa
     },
@@ -78,12 +56,12 @@ _sigma_queries = {
         "dump_mode": "overwrite",
         "execute_query": """
             SELECT
-                CPF_CNPJ,
-                TIPO_CPF_CNPJ,
-                NOME,
-                NUMERO_PORTA,
-                COMPLEMENTO
-            FROM SIGMA.VW_FORNECEDOR_SEM_VINCULO
+                CPF_CNPJ, TIPO_CPF_CNPJ, NOME, EMAIL, FAX, DDD, DDI,
+                RAMAL, TELEFONE, LOGRADOURO, NUMERO_PORTA, COMPLEMENTO,
+                BAIRRO, MUNICIPIO, UF, CEP, ATIVO_INATIVO_BLOQUEADO,
+                CD_NATUREZA_JURIDICA, DS_NATUREZA_JURIDICA, RAMO_ATIVIDADE,
+                CD_PORTE_EMPRESA, DATA_ULTIMA_ATUALIZACAO
+            FROM SIGMA.VW_FORNECEDOR_SEM_VINCULO_OLD
         """,  # noqa
     },
     "grupo": {
@@ -105,37 +83,14 @@ _sigma_queries = {
         "materialization_mode": "prod",
         "dump_mode": "overwrite",
         "execute_query": """
-            SELECT C
-                D_MATERIAL,
-                CD_GRUPO,
-                CD_CLASSE,
-                CD_SUBCLASSE,
-                SEQUENCIAL,
-                DV1,
-                DV2,
-                NM_PADRONIZADO,
-                NM_COMPLEMENTAR_MATERIAL,
-                UNIDADE,
-                DS_DETALHE_MATERIAL,
-                DT_DESATIVACAO,
-                ST_STATUS,
-                REMUME,
-                ACONDICIONAMENTO,
-                TP_GENERO,
-                CD_MATERIAL_SUBSTITUTO,
-                NM_FANTASIA,
-                CD_COMPRASNET,
-                TP_MATERIAL,
-                ST_REFERENCIA,
-                ST_SISTEMA_REGISTRO_PRECO,
-                TERMOLABEL,
-                ST_CONTROLADO,
-                ST_PADRONIZADO,
-                ST_USO_GERAL,
-                ST_CONTINUADO,
-                ST_TABELADO,
-                ST_ITEM_SUSTENTAVEL,
-                OBSERVACAO
+            SELECT
+                CD_MATERIAL, CD_GRUPO, CD_CLASSE, CD_SUBCLASSE, SEQUENCIAL,
+                DV1, DV2, NM_PADRONIZADO, NM_COMPLEMENTAR_MATERIAL, UNIDADE,
+                DS_DETALHE_MATERIAL, DT_DESATIVACAO, ST_STATUS, REMUME,
+                ACONDICIONAMENTO, TP_GENERO, CD_MATERIAL_SUBSTITUTO, NM_FANTASIA,
+                CD_COMPRASNET, TP_MATERIAL, ST_REFERENCIA, ST_SISTEMA_REGISTRO_PRECO,
+                TERMOLABEL, ST_CONTROLADO, ST_PADRONIZADO, ST_USO_GERAL, ST_CONTINUADO,
+                ST_TABELADO, ST_ITEM_SUSTENTAVEL, OBSERVACAO
             FROM SIGMA.VW_MATERIAL
         """,  # noqa
     },
