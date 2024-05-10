@@ -122,7 +122,7 @@ ergon_queries = {
                 FLEX_CAMPO_07, FLEX_CAMPO_08, FLEX_CAMPO_09, FLEX_CAMPO_10,
                 JUSTIFICATIVA, PRAZO, NEXO, JURIDICO, MOTIVOPUBL, VERSAOPUBL,
                 FLEX_CAMPO_11
-            FROM ERGON.ERG_PM_RESULTPRONT;
+            FROM ERGON.ERG_PM_RESULTPRONT
         """,
     },
     "exames": {
