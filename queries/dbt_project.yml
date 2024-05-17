@@ -48,3 +48,8 @@ models:
     compras_materiais_servicos_sigma:
       +materialized: table
       +schema: compras_materiais_servicos_sigma
+    recursos_humanos_ergon_pericia_medica:
+      +materialized: table
+      +schema: recursos_humanos_ergon_pericia_medica
+
+

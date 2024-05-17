@@ -484,91 +484,29 @@ ergon_queries = {
         FROM ERGON.IPL_PT_FICHAS
         """,
     },
-    # "rubrica": {
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "folha_empresa_original": {
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_vwsolicbim": {
-    #     "dataset_id": "recursos_humanos_ergon_bim",
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_vwbim": {
-    #     "dataset_id": "recursos_humanos_ergon_bim",
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_solic_bim": {
-    #     "dataset_id": "recursos_humanos_ergon_bim",
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_bim": {
-    #     "dataset_id": "recursos_humanos_ergon_bim",
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_solic_bim_vinc": {
-    #     "dataset_id": "recursos_humanos_ergon_bim",
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
-    # "tpmrj_pm_vwafastamentoeferias": {
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "append",
-    #     "lower_bound_date": "current_month",
-    #     "partition_columns": "MES_ANO_FOLHA",
-    #     "execute_query": """
-    #     """,
-    # },
+    "rubrica": {
+        "materialize_after_dump": True,
+        "biglake_table": True,
+        "materialization_mode": "prod",
+        "dump_mode": "overwrite",
+        "execute_query": """
+            SELECT
+                RUBRICA, NOME, MNEMONICO, NOME_ABREV,
+                TIPORUBR, FAT_VANT, FAT_IR, FAT_PREV,
+                FAT_IRFER, FAT_PREVFER, FAT_RAIS, E_CONS,
+                E_PA, E_SALFAM, E_IR, E_PREV, COMISSAO,
+                FLEX_CAMPO_01, FLEX_CAMPO_02, FLEX_CAMPO_03,
+                FLEX_CAMPO_04, FLEX_CAMPO_05, RUB, USA_COMPLEMENTO,
+                FORMULA_PADRAO_02, FORMULA_PADRAO_12, PONTLEI, SQL_LOVCOMPL,
+                VALIDA_COMPL_BD, FORMATO_COMPLEMENTO, FORMULA_PADRAO_02PER,
+                FORMULA_PADRAO_12PER, MODALIDADE_CALCULO, FLEX_CAMPO_06,
+                FLEX_CAMPO_07, FLEX_CAMPO_08, FLEX_CAMPO_09, FLEX_CAMPO_10,
+                PONTPUBL, FAT_VANT_REPASSE, E_REPASSE, FLEX_CAMPO_11, FLEX_CAMPO_12,
+                FLEX_CAMPO_13, FLEX_CAMPO_14, FLEX_CAMPO_15, FLEX_CAMPO_16, FLEX_CAMPO_17,
+                FLEX_CAMPO_18, FLEX_CAMPO_19, FLEX_CAMPO_20, ID_REG
+            FROM ERGON.RUBRICAS
+        """,
+    },
 }
 
 ergon_clocks = generate_dump_db_schedules(
