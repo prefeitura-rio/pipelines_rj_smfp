@@ -34,6 +34,8 @@ rj_smfp_dump_db_sigma_medicamentos_flow.run_config = KubernetesRun(
     labels=[
         constants.RJ_SMFP_AGENT_LABEL.value,
     ],
+    memory_limit="2Gi",
+    memory_request="2Gi",
 )
 
 rj_smfp_dump_db_sigma_medicamentos_default_parameters = {
