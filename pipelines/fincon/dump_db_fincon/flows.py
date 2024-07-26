@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Database dumping flows for SMFP FINCON
+Database dumping flows for SMFP FINCON..
 """
 
 from copy import deepcopy
