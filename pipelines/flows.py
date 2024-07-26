@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Imports all flows for every project so we can register all of them.
+Imports all flows for every project so we can register all of them...
 """
 from pipelines.egpweb_metas import *  # noqa
 from pipelines.ergon import *  # noqa
