@@ -8,5 +8,6 @@ from pipelines.ergon_comlurb import *  # noqa
 from pipelines.exemplo import *  # noqa
 from pipelines.fincon import *  # noqa
 from pipelines.iptu_inad import *  # noqa
+from pipelines.receita_federal_cnpj import *  # noqa
 from pipelines.sigma import *  # noqa
 from pipelines.templates import *  # noqa
