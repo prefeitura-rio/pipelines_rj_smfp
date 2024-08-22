@@ -34,7 +34,7 @@ porte_empresa_clocks = generate_dump_db_schedules(
         constants.RJ_SMFP_AGENT_LABEL.value,
     ],
     db_database="CLUSTERSQL2",
-    db_host="10.70.1.3",
+    db_host="10.70.1.34",
     db_port="1433",
     db_type="sql_server",
     dataset_id="porte_empresa",
