@@ -563,37 +563,21 @@ ergon_queries = {
             FROM ERGON.CONCURSOS
         """,
     },
-    # "folhas_emp": {
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "overwrite",
-    #     "execute_query": """
-    #         SELECT
-    #             MES_ANO, NUMERO, EMP_CODIGO, TIPO_FOLHA, NOME, DATA_ABER,
-    #             MES_PRINCIPAL, MESES_RETRO, MESES_RETRO_FULL, MESES_ADIANT,
-    #             MESES_PRE_ERGON, DATA_PROC, DATA_CONSOL, RESPONSAVEL, TIPO_CALCULO,
-    #             DATA_CREDITO, DESTINO, EXPIRACAO, FLEX_CAMPO_01, FLEX_CAMPO_02,
-    #             FLEX_CAMPO_03, FLEX_CAMPO_04, FLEX_CAMPO_05, FLEX_CAMPO_06,
-    #             FLEX_CAMPO_07, FLEX_CAMPO_08, FLEX_CAMPO_09, FLEX_CAMPO_10,
-    #             DATA_GERACAO_FITABANCO, FLEX_CAMPO_11, FLEX_CAMPO_12, FLEX_CAMPO_13,
-    #             FLEX_CAMPO_14, FLEX_CAMPO_15, FLEX_CAMPO_16, FLEX_CAMPO_17, FLEX_CAMPO_18,
-    #             FLEX_CAMPO_19, FLEX_CAMPO_20, NUMERO_SEC, GRUPO_EMPRESAS, CLASSE_CALCULO,
-    #             CLASSE_ESTORNO, DATA_LIMITES, ID_GRUPO_FOL_SEG, DATA_GERAELEITOS,
-    #             DATA_GERAELEITOS_ANT, NUMERO_TERC, ID_REG
-    #         FROM ERGON.FOLHAS_EMP
-    #     """,
-    # },
-    # "formas_vac": {
-    #     "materialize_after_dump": True,
-    #     "biglake_table": True,
-    #     "materialization_mode": "prod",
-    #     "dump_mode": "overwrite",
-    #     "execute_query": """
-    #         SELECT
-    #         FROM ERGON.FORMAS_VAC
-    #     """,
-    # },
+    "formas_vac": {
+        "materialize_after_dump": True,
+        "biglake_table": True,
+        "materialization_mode": "prod",
+        "dump_mode": "overwrite",
+        "execute_query": """
+            SELECT 
+                FLEX_CAMPO_05, FLEX_CAMPO_04, FLEX_CAMPO_03, FLEX_CAMPO_02, FLEX_CAMPO_01, 
+                NOME, SIGLA, FLEX_CAMPO_20, FLEX_CAMPO_19, FLEX_CAMPO_18, FLEX_CAMPO_17, 
+                FLEX_CAMPO_16, FLEX_CAMPO_15, FLEX_CAMPO_06, FLEX_CAMPO_14, FLEX_CAMPO_13, 
+                FLEX_CAMPO_12, FLEX_CAMPO_11, FLEX_CAMPO_10, FLEX_CAMPO_09, FLEX_CAMPO_08, 
+                FLEX_CAMPO_07, PONTLEI, CODIGO_CAGED
+            FROM ERGON.FORMAS_VAC
+        """,
+    },
 }
 
 ergon_clocks = generate_dump_db_schedules(
