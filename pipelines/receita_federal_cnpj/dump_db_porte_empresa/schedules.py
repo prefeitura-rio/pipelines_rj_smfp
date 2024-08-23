@@ -20,10 +20,19 @@ from pipelines.constants import constants
 
 porte_empresa_queries = {
     "situacao_cadastral": {
-        "dump_mode": "overwrite",
-        "execute_query": "SELECT * FROM SDI.ReceitaFederal.Vw_PorteEmpresa_Sigma",
-        "materialize_after_dump": False,
+        "materialize_after_dump": True,
+        "biglake_table": True,
         "materialization_mode": "prod",
+        "partition_columns": "dt_SituacaoCadastral",
+        "partition_date_format": "%Y-%m-%d",
+        "dump_mode": "append",
+        "lower_bound_date": "current_month",
+        "execute_query": """
+            SELECT 
+                CNPJ_basico, CNPJ_ordem, CNPJ_dv, RazaoSocial, 
+                cd_PorteEmpresa, cd_SituacaoCadastral, dt_SituacaoCadastral
+            FROM SDI.ReceitaFederal.Vw_PorteEmpresa_Sigma;
+        """,
     }
 }
 
@@ -33,7 +42,7 @@ porte_empresa_clocks = generate_dump_db_schedules(
     labels=[
         constants.RJ_SMFP_AGENT_LABEL.value,
     ],
-    db_database="CLUSTERSQL2",
+    db_database="SDI",
     db_host="10.70.1.34",
     db_port="1433",
     db_type="sql_server",

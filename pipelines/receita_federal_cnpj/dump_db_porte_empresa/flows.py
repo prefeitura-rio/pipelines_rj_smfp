@@ -31,7 +31,7 @@ porte_empresa_flow.run_config = KubernetesRun(
     ],
 )
 porte_empresa_default_parameters = {
-    "db_database": "CLUSTERSQL2",
+    "db_database": "SDI",
     "db_host": "10.70.1.34",
     "db_port": "1433",
     "db_type": "sql_server",
