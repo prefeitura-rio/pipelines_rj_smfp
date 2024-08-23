@@ -15,7 +15,6 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
 )
 
 from pipelines.constants import constants
-
 from pipelines.receita_federal_cnpj.dump_db_porte_empresa.schedules import (
     porte_empresa_schedule,
 )
