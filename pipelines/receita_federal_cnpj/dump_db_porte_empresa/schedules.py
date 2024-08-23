@@ -28,8 +28,8 @@ porte_empresa_queries = {
         "dump_mode": "append",
         "lower_bound_date": "current_month",
         "execute_query": """
-            SELECT 
-                CNPJ_basico, CNPJ_ordem, CNPJ_dv, RazaoSocial, 
+            SELECT
+                CNPJ_basico, CNPJ_ordem, CNPJ_dv, RazaoSocial,
                 cd_PorteEmpresa, cd_SituacaoCadastral, dt_SituacaoCadastral
             FROM SDI.ReceitaFederal.Vw_PorteEmpresa_Sigma;
         """,
