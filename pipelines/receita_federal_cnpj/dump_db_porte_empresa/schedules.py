@@ -31,7 +31,7 @@ porte_empresa_queries = {
             SELECT
                 CNPJ_basico, CNPJ_ordem, CNPJ_dv, RazaoSocial,
                 cd_PorteEmpresa, cd_SituacaoCadastral, dt_SituacaoCadastral
-            FROM SDI.ReceitaFederal.Vw_PorteEmpresa_Sigma;
+            FROM SDI.ReceitaFederal.Vw_PorteEmpresa_Sigma
         """,
     }
 }
