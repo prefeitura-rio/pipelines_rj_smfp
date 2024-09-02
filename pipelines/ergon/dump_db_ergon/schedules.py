@@ -569,13 +569,14 @@ ergon_queries = {
         "materialization_mode": "prod",
         "dump_mode": "overwrite",
         "execute_query": """
-            SELECT
-                FLEX_CAMPO_05, FLEX_CAMPO_04, FLEX_CAMPO_03, FLEX_CAMPO_02, FLEX_CAMPO_01,
-                NOME, SIGLA, FLEX_CAMPO_20, FLEX_CAMPO_19, FLEX_CAMPO_18, FLEX_CAMPO_17,
-                FLEX_CAMPO_16, FLEX_CAMPO_15, FLEX_CAMPO_06, FLEX_CAMPO_14, FLEX_CAMPO_13,
-                FLEX_CAMPO_12, FLEX_CAMPO_11, FLEX_CAMPO_10, FLEX_CAMPO_09, FLEX_CAMPO_08,
-                FLEX_CAMPO_07, PONTLEI, CODIGO_CAGED
-            FROM ERGON.FORMAS_VAC
+            SELECT 
+                SIGLA, NOME, FLEX_CAMPO_01, FLEX_CAMPO_02, FLEX_CAMPO_03, 
+                FLEX_CAMPO_04, FLEX_CAMPO_05, PONTLEI, FLEX_CAMPO_06, FLEX_CAMPO_07, 
+                FLEX_CAMPO_08, FLEX_CAMPO_09, FLEX_CAMPO_10, FLEX_CAMPO_11, 
+                FLEX_CAMPO_12, FLEX_CAMPO_13, FLEX_CAMPO_14, FLEX_CAMPO_15, 
+                FLEX_CAMPO_16, FLEX_CAMPO_17, FLEX_CAMPO_18, FLEX_CAMPO_19, 
+                FLEX_CAMPO_20, CODIGO_CAGED
+            FROM ERGON.FORMAS_VAC_
         """,
     },
 }
