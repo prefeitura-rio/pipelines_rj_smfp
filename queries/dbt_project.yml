@@ -51,5 +51,9 @@ models:
     recursos_humanos_ergon_pericia_medica:
       +materialized: table
       +schema: recursos_humanos_ergon_pericia_medica
+    porte_empresa:
+      +materialized: table
+      +schema: porte_empresa
+
 
 
