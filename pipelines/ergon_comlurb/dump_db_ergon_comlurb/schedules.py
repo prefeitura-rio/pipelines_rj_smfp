@@ -365,7 +365,9 @@ ergon_queries = {
         "biglake_table": True,
         "materialization_mode": "prod",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "partition_columns": "MES_ANO",
         "dbt_alias": True,
         "execute_query": """
