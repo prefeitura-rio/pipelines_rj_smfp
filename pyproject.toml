@@ -9,7 +9,7 @@ python = ">=3.10,<3.11"
 dbt-bigquery = "^1.6.1"
 google-cloud-storage = "^2.10.0"
 prefect = "1.4.1"
-prefeitura-rio = { git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "f20d7152431782053225565b0c95988ec0377b1e", extras = [
+prefeitura-rio = { git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "4bfd6a56fa1eedef312d24d81b1bece24f6eecd0", extras = [
     "pipelines",
     "pipelines-templates",
     "actions"
