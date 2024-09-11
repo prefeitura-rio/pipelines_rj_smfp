@@ -82,7 +82,9 @@ ergon_queries = {
         "materialization_mode": "prod",
         "partition_columns": "MES_ANO",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
             SELECT
                 LANCAMENTO, NUMFUNC, NUMVINC, MES_ANO, NUMERO, RUBRICA, SETOR,
@@ -101,7 +103,9 @@ ergon_queries = {
         "materialization_mode": "prod",
         "partition_columns": "MES_ANO",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
             SELECT
                 MES_ANO, NUMERO, EMP_CODIGO, TIPO_FOLHA, NOME, DATA_ABER,
@@ -327,7 +331,9 @@ ergon_queries = {
         "materialization_mode": "prod",
         "partition_columns": "DTINI",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
         SELECT
             NUMFUNC,NUMVINC,DTINI,DTFIM,TIPOFREQ,CODFREQ,MOTIVO,DTPREVFIM,FLEX_CAMPO_01,
@@ -341,7 +347,9 @@ ergon_queries = {
         "materialization_mode": "prod",
         "partition_columns": "DTINI",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
             SELECT
                 NUMFUNC,NUMVINC,DTINI,DTFIM,TIPOFREQ,CODFREQ,OBS,EMP_CODIGO
@@ -354,7 +362,9 @@ ergon_queries = {
         "materialization_mode": "prod",
         "partition_columns": "DTINI",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
         SELECT
             NUMFUNC,NUMVINC,VANTAGEM,DTINI,DTFIM,VALOR,INFO,TIPO_INCORPORACAO,PERC_INC_FUNCAO,
@@ -460,7 +470,9 @@ ergon_queries = {
         "biglake_table": True,
         "materialization_mode": "prod",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "partition_columns": "MES_ANO_FOLHA",
         "execute_query": """
             SELECT
@@ -474,7 +486,9 @@ ergon_queries = {
         "biglake_table": True,
         "materialization_mode": "prod",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "partition_columns": "MES_ANO_FOLHA",
         "execute_query": """
         SELECT

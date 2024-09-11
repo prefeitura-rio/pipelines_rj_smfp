@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Schedules for the database dump pipeline
+Schedules for the database dump pipeline.....
 """
 
 from datetime import datetime, timedelta
@@ -26,7 +26,9 @@ porte_empresa_queries = {
         "partition_columns": "dt_SituacaoCadastral",
         "partition_date_format": "%Y-%m-%d",
         "dump_mode": "append",
-        "lower_bound_date": "current_month",
+        "break_query_frequency": "month",
+        "break_query_start": "current_month",
+        "break_query_end": "current_month",
         "execute_query": """
             SELECT
                 CNPJ_basico, CNPJ_ordem, CNPJ_dv, RazaoSocial,
