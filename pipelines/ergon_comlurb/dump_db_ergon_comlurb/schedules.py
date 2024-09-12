@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0302
 """
-Schedules for the database dump pipeline...
+Schedules for the database dump pipeline....
 """
 
 from datetime import datetime, timedelta
