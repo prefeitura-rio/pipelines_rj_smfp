@@ -54,6 +54,3 @@ models:
     porte_empresa:
       +materialized: table
       +schema: porte_empresa
-
-
-
