@@ -54,3 +54,6 @@ models:
     porte_empresa:
       +materialized: table
       +schema: porte_empresa
+    recursos_humanos_ergon_saude
+      +materialized: table
+      +schema: recursos_humanos_ergon_saude
