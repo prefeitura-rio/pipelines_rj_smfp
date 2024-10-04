@@ -15,7 +15,7 @@ from pipelines.constants import constants
 smfp_funcionarios_saude_clocks = [
     IntervalClock(
         interval=timedelta(days=1),
-        start_date=datetime(2021, 11, 23, 14, 0, tzinfo=pytz.timezone("America/Sao_Paulo")),
+        start_date=datetime(2021, 11, 23, 1, 0, tzinfo=pytz.timezone("America/Sao_Paulo")),
         labels=[
             constants.RJ_SMFP_AGENT_LABEL.value,
         ],
