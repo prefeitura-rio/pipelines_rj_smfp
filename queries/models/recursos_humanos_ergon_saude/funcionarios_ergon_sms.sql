@@ -23,7 +23,13 @@ funcionarios AS (
     ps.cpf AS cpf_sms,
     ps.nome AS nome_sms,
     fa.cpf AS cpf_ergon,
-    fa.nome AS nome_ergon
+    fa.nome AS nome_ergon,
+    fa.id_secretaria,
+    fa.secretaria_nome,
+    fa.secretaria_sigla,
+    fa.id_empresa,
+    fa.empresa_nome,
+    fa.empresa_sigla
   FROM all_cpf cpf
   LEFT JOIN `rj-sms.saude_dados_mestres.profissional_saude` ps
     ON cpf.cpf = ps.cpf
@@ -38,6 +44,12 @@ funcionarios_check AS (
     cpf_ergon,
     nome_sms,
     nome_ergon,
+    id_secretaria,
+    secretaria_nome,
+    secretaria_sigla,
+    id_empresa,
+    empresa_nome,
+    empresa_sigla,
     CASE
       WHEN cpf_sms IS NOT NULL AND cpf_ergon IS NOT NULL THEN 'both'
       WHEN cpf_sms IS NOT NULL THEN 'sms'
@@ -53,7 +65,14 @@ funcionarios_check AS (
 
 SELECT
   check,
+  id_secretaria,
+  secretaria_nome,
+  secretaria_sigla,
+  id_empresa,
+  empresa_nome,
+  empresa_sigla,
   COUNT(*) AS count
 FROM funcionarios_check
-GROUP BY 1
-ORDER BY 2
+WHERE check = 'both'
+GROUP BY 1,2,3,4,5,6, 7
+ORDER BY 7
