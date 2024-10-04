@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Materialize Active SMS Employees from Ergon
+Materialize Active SMS Employees from Ergon.
 """
 
 from copy import deepcopy
@@ -28,7 +28,9 @@ run_dbt_smfp_funcionarios_saude.state_handlers = [
     handler_initialize_sentry,
 ]
 run_dbt_smfp_funcionarios_saude.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
-run_dbt_smfp_funcionarios_saude.run_config = KubernetesRun(image=constants.DOCKER_IMAGE.value)
+run_dbt_smfp_funcionarios_saude.run_config = KubernetesRun(
+    image=constants.DOCKER_IMAGE.value, labels=[constants.RJ_SMFP_AGENT_LABEL.value]
+)
 
 smfp_funcionarios_saude_default_parameters = {
     "dataset_id": "recursos_humanos_ergon_saude",
