@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-DBT-related flows for EGPWeb Dashboard de Metas
+Materialize Active SMS Employees from Ergon
 """
 
 from copy import deepcopy
