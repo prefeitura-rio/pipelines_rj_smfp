@@ -16,6 +16,7 @@ RUN apt-get update && \
 
 # Start Python image
 FROM python:${PYTHON_VERSION}
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install a few dependencies and setup oracle instant client
 WORKDIR /opt/oracle
