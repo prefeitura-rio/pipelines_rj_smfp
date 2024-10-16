@@ -152,20 +152,6 @@ _alvaras_infra_query = {
             FROM DW_BI_ALVARAS.dbo.TAB_CNAE;
         """,
     },
-    "tab_cnae_tmp": {
-        "biglake_table": True,
-        "materialize_after_dump": True,
-        "materialization_mode": "prod",
-        "materialize_to_datario": False,
-        "dump_to_gcs": False,
-        "dump_mode": "overwrite",
-        "execute_query": """
-            SELECT
-                ID_CNAE,
-                DSC_CNAE
-            FROM DW_BI_ALVARAS.dbo.TAB_CNAE_TMP;
-        """,
-    },
     "tab_consulta": {
         "biglake_table": True,
         "materialize_after_dump": True,
