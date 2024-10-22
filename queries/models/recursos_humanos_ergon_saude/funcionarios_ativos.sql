@@ -125,7 +125,7 @@ funcionarios_saude AS (
   LEFT JOIN secretaria sec
       ON s.id_secretaria = sec.id_secretaria
 
-  WHERE s.id_secretaria IN ('1800', '1700')
+  WHERE s.id_secretaria IN ('1800')
     OR  p.id_empresa IN ('32','80','81','82','83','84','85','86','87','88','89','97')
 )
 
