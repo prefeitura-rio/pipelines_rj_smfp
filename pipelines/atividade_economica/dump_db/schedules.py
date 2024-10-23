@@ -31,7 +31,8 @@ _alvaras_infra_query = {
                 ID_Alvara,
                 Quantidade,
                 ID_AtvProcesso,
-                ID_CAE, ID_CNAE,
+                ID_CAE, 
+                ID_CNAE,
                 ID_DiaDeferimento,
                 ID_DiaSolicitacao,
                 ID_DiaTaxaPagamen,
@@ -228,7 +229,7 @@ alvaras_infra_clocks = generate_dump_db_schedules(
     db_host="10.70.15.11",
     db_port="1433",
     db_type="sql_server",
-    dataset_id="alvaras",
+    dataset_id="atividade_economica",
     infisical_secret_path="/db-alvaras",
     table_parameters=_alvaras_infra_query,
 )

@@ -14,7 +14,7 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
     handler_inject_bd_credentials,
 )
 
-from pipelines.alvaras.dump_db.schedules import alvaras_infra_daily_update_schedule
+from pipelines.atividade_economica.dump_db.schedules import alvaras_infra_daily_update_schedule
 from pipelines.constants import constants
 
 rj_iplanrio_alvaras_flow = deepcopy(dump_sql_flow)
@@ -37,7 +37,7 @@ alvaras_default_parameters = {
     "db_host": "10.70.15.11",
     "db_port": "1433",
     "db_type": "sql_server",
-    "dataset_id": "alvaras",
+    "dataset_id": "atividade_economica",
     "infisical_secret_path": "/db-alvaras",
 }
 
