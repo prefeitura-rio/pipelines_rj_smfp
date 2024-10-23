@@ -14,7 +14,9 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
     handler_inject_bd_credentials,
 )
 
-from pipelines.atividade_economica.dump_db.schedules import alvaras_infra_daily_update_schedule
+from pipelines.atividade_economica.dump_db.schedules import (
+    alvaras_infra_daily_update_schedule,
+)
 from pipelines.constants import constants
 
 rj_iplanrio_alvaras_flow = deepcopy(dump_sql_flow)

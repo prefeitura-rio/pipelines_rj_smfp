@@ -31,7 +31,7 @@ _alvaras_infra_query = {
                 ID_Alvara,
                 Quantidade,
                 ID_AtvProcesso,
-                ID_CAE, 
+                ID_CAE,
                 ID_CNAE,
                 ID_DiaDeferimento,
                 ID_DiaSolicitacao,
