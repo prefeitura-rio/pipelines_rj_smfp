@@ -24,7 +24,7 @@ dump_sql_ergon_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 dump_sql_ergon_flow.run_config = DockerRun(
     image=constants.DOCKER_IMAGE.value,
     labels=[
-        constants.RJ_SMFP_AGENT_LABEL.value,
+        constants.RJ_LOCAL_IPLAN_AGENT_LABEL.value,
     ],
 )
 
