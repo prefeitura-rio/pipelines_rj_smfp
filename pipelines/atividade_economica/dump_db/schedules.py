@@ -63,19 +63,6 @@ _alvaras_infra_query = {
             FROM DW_BI_ALVARAS.dbo.FACT_FatoCP;
         """,
     },
-    "fact_fatodatacarga": {
-        "biglake_table": True,
-        "materialize_after_dump": True,
-        "materialization_mode": "prod",
-        "materialize_to_datario": False,
-        "dump_to_gcs": False,
-        "dump_mode": "overwrite",
-        "execute_query": """
-            SELECT
-                DataCarga
-            FROM DW_BI_ALVARAS.dbo.FACT_FatoDataCarga;
-        """,
-    },
     "tab_alvara": {
         "biglake_table": True,
         "materialize_after_dump": True,
