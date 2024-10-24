@@ -30,7 +30,7 @@ rj_iplanrio_alvaras_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 rj_iplanrio_alvaras_flow.run_config = KubernetesRun(
     image=constants.DOCKER_IMAGE.value,
     labels=[
-        constants.RJ_IPLANRIO_AGENT_LABEL.value,  # label do agente
+        constants.RJ_SMFP_AGENT_LABEL.value,  # label do agente
     ],
 )
 
@@ -49,3 +49,4 @@ rj_iplanrio_alvaras_flow = set_default_parameters(
 )
 
 rj_iplanrio_alvaras_flow.schedule = alvaras_infra_daily_update_schedule
+

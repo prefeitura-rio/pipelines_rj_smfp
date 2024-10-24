@@ -223,7 +223,7 @@ alvaras_infra_clocks = generate_dump_db_schedules(
     interval=timedelta(days=1),
     start_date=datetime(2022, 3, 21, 2, 0, tzinfo=pytz.timezone("America/Sao_Paulo")),
     labels=[
-        constants.RJ_IPLANRIO_AGENT_LABEL.value,
+        constants.RJ_SMFP_AGENT_LABEL.value,
     ],
     db_database="DW_BI_ALVARAS",
     db_host="10.70.15.11",
