@@ -49,4 +49,3 @@ rj_iplanrio_alvaras_flow = set_default_parameters(
 )
 
 rj_iplanrio_alvaras_flow.schedule = alvaras_infra_daily_update_schedule
-
