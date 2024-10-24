@@ -3,7 +3,7 @@ SELECT
     SAFE_CAST(ano_do_acordo_a_que_se_refere_o_recurso AS INT64) as ano,
     SAFE_CAST(orgao_solicitante AS STRING) as orgao,
     SAFE_CAST(SAFE_CAST(SAFE_CAST(cod_meta AS FLOAT64) AS INT64) AS STRING) as codigo_meta,
-    SAFE_CAST(orgao_acordo_egpweb AS STRING) as orgao_egpweb,    
+    SAFE_CAST(orgao_acordo_egpweb AS STRING) as orgao_egpweb,
     SAFE_CAST(oficio AS STRING) as oficio,
     SAFE_CAST(codigo_processorio AS STRING) as codigo_processorio,
     SAFE_CAST(data_solicitacao AS DATE FORMAT 'DD/MM/YYYY') as data_solicitacao,
