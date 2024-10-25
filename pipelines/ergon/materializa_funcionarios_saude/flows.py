@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Materialize Active SMS Employees from Ergon..
+Materialize Active SMS Employees from Ergon...
 """
 
 from copy import deepcopy
