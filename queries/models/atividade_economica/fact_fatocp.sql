@@ -9,4 +9,4 @@ SELECT
     SAFE_CAST(ID_TipoContribuint AS STRING) AS ID_TipoContribuint,
     SAFE_CAST(ID_TipoSolicitacao AS STRING) AS ID_TipoSolicitacao
 
-FROM `rj-iplanrio.alvaras_staging.fact_fatocp`
+FROM `rj-smfp.atividade_economica_staging.fact_fatocp`

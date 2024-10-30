@@ -4,4 +4,4 @@ SELECT
     SAFE_CAST(ID_TipoAtividade AS STRING) AS ID_TipoAtividade,
     SAFE_CAST(DSC_TipoAtividade AS STRING) AS DSC_TipoAtividade
 
-FROM `rj-iplanrio.alvaras_staging.tab_cae`
+FROM `rj-smfp.atividade_economica_staging.tab_cae`

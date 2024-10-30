@@ -10,4 +10,4 @@ SELECT
     SAFE_CAST(DSC_TipoAnalise_cp AS STRING) AS DSC_TipoAnalise_cp,
     SAFE_CAST(DSC_Status_cp AS STRING) AS DSC_Status_cp
 
-FROM `rj-iplanrio.alvaras_staging.tab_consulta`
+FROM `rj-smfp.atividade_economica_staging.tab_consulta`

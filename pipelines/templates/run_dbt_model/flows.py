@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 """
+<<<<<<< HEAD
+MATERIALIZA MODELOS DO DBT..............
+=======
 MATERIALIZA MODELOS DO DBT...
+>>>>>>> 9248dea3c889cc0dd0466f8c2e75465ca1dbf796
 """
 
 from copy import deepcopy
