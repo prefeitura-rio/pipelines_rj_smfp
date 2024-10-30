@@ -2589,8 +2589,8 @@ sgrc = ["aiohttp (>=3.8.5,<4.0.0)", "pendulum (>=2.1.2,<3.0.0)", "pytz (>=2023.3
 [package.source]
 type = "git"
 url = "https://github.com/prefeitura-rio/prefeitura-rio"
-reference = "f04d50d26732705f77a56db0124d5828af6a501d"
-resolved_reference = "f04d50d26732705f77a56db0124d5828af6a501d"
+reference = "20bfa9cfc42b836fee63094cd07efe6b11a519e5"
+resolved_reference = "20bfa9cfc42b836fee63094cd07efe6b11a519e5"
 
 [[package]]
 name = "proto-plus"
@@ -4293,4 +4293,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.11"
-content-hash = "23fd76f5ed0f4f45d1ae57858b422a2598aac9bee697a2db25d07ccb7ec0f658"
+content-hash = "8fb50c079512a5cb7699028ce066243e333bb0f3aa3258139031557eed78d686"
