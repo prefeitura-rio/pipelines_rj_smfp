@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Database dumping flows for SMFP SIGMA COMPRAS MATERIAIS...
+Database dumping flows for SMFP SIGMA COMPRAS MATERIAIS....
 """
 
 from copy import deepcopy
