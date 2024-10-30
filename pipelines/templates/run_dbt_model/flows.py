@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
 MATERIALIZA MODELOS DO DBT..............
-=======
-MATERIALIZA MODELOS DO DBT...
->>>>>>> 9248dea3c889cc0dd0466f8c2e75465ca1dbf796
 """
 
 from copy import deepcopy
@@ -39,4 +35,4 @@ templates__run_dbt_model_smas__flow = set_default_parameters(
     default_parameters=templates_run_dbt_model_smas_default_parameters,
 )
 
-# add comment to trigger build
+# add comment to trigger build  
