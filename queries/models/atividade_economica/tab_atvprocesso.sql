@@ -4,4 +4,4 @@ SELECT
     SAFE_CAST(DSC_RespAtividade AS STRING) AS DSC_RespAtividade,
     SAFE_CAST(DSC_RefAtividade AS STRING) AS DSC_RefAtividade
 
-FROM `rj-iplanrio.alvaras_staging.tab_atvprocesso`
+FROM `rj-smfp.atividade_economica_staging.tab_atvprocesso`
