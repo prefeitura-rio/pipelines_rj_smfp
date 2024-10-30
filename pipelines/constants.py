@@ -17,6 +17,7 @@ class constants(Enum):
     # Agent labels
     ######################################
     RJ_SMFP_AGENT_LABEL = "smfp"
+    RJ_LOCAL_IPLAN_AGENT_LABEL = "local-iplan"
 
     ######################################
     # Other constants
