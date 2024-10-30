@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # flake8: noqa: E501
 """
-Schedules for the database dump pipeline.....
+Schedules for the database dump pipeline.
 """
 
 from datetime import datetime, timedelta
@@ -599,7 +599,7 @@ ergon_clocks = generate_dump_db_schedules(
     interval=timedelta(days=1),
     start_date=datetime(2022, 11, 9, 22, 30, tzinfo=pytz.timezone("America/Sao_Paulo")),
     labels=[
-        constants.RJ_SMFP_AGENT_LABEL.value,
+        constants.RJ_LOCAL_IPLAN_AGENT_LABEL.value,
     ],
     db_database="P01.PCRJ",
     db_host="10.70.6.21",
@@ -608,6 +608,7 @@ ergon_clocks = generate_dump_db_schedules(
     dataset_id="recursos_humanos_ergon",
     infisical_secret_path="/db-ergon-prod",
     table_parameters=ergon_queries,
+    agent_label=constants.RJ_SMFP_AGENT_LABEL.value,
 )
 
 ergon_monthly_update_schedule = Schedule(clocks=untuple(ergon_clocks))
