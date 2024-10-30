@@ -19,4 +19,4 @@ SELECT
     SAFE_CAST(DSC_Numero AS FLOAT64) AS DSC_Numero,
     SAFE_CAST(DSC_AlvaraLiberado AS STRING) AS DSC_AlvaraLiberado
 
-FROM `rj-iplanrio.alvaras_staging.tab_alvara`
+FROM `rj-smfp.atividade_economica_staging.tab_alvara`
