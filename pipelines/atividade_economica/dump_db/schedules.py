@@ -222,3 +222,4 @@ alvaras_infra_clocks = generate_dump_db_schedules(
 )
 
 alvaras_infra_daily_update_schedule = Schedule(clocks=untuple(alvaras_infra_clocks))
+
