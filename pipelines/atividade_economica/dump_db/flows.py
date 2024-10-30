@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Database dumping flows for alvaras....
+Database dumping flows for alvaras......
 """
 
 from copy import deepcopy
@@ -24,7 +24,7 @@ rj_iplanrio_alvaras_flow.state_handlers = [
     handler_inject_bd_credentials,
     handler_initialize_sentry,
 ]
-rj_iplanrio_alvaras_flow.name = "IPLANRIO: Alvaras - Ingerir tabelas de banco SQL"
+rj_iplanrio_alvaras_flow.name = "SMFP: Alvaras - Ingerir tabelas de banco SQL"
 rj_iplanrio_alvaras_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 
 rj_iplanrio_alvaras_flow.run_config = KubernetesRun(

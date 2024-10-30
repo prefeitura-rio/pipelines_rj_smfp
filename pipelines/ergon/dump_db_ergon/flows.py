@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-<<<<<<< HEAD
-Database dumping flows for segovi project..........
-=======
 Database dumping flows for segovi project.....
->>>>>>> 9248dea3c889cc0dd0466f8c2e75465ca1dbf796
 """
 
 from copy import deepcopy
