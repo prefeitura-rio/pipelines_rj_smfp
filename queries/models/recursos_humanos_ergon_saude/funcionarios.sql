@@ -1,4 +1,3 @@
-
 {{
     config(
         materialized="table",
@@ -17,7 +16,7 @@ with
             lpad(f.id_cpf, 11, '0') as cpf,  -- Adiciona zero à esquerda caso o CPF tenha menos de 11 dígitos
             f.nome
         from `rj-smfp.recursos_humanos_ergon.funcionario` f
-        where f.id_cpf is not null -- and lpad(f.id_cpf, 11, '0') in ('')
+        where f.id_cpf is not null  -- and lpad(f.id_cpf, 11, '0') in ('')
     ),
 
     provimento as (
@@ -64,9 +63,9 @@ with
     vacancia_vinculo as (
         select id_funcionario, id_vinculo, data_vacancia
         from `rj-smfp.recursos_humanos_ergon.vinculo`
-        -- get the most recent id_vinculo
-        -- qualify
-        --     row_number() over (partition by id_funcionario order by id_vinculo desc) = 1
+    -- get the most recent id_vinculo
+    -- qualify
+    -- row_number() over (partition by id_funcionario order by id_vinculo desc) = 1
     ),
 
     empresa as (
@@ -130,9 +129,22 @@ with
         left join secretaria sec on s.id_secretaria = sec.id_secretaria
 
         where
-            s.id_secretaria in ('1800')
-            or p.id_empresa
-            in ('32', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '97')
+            s.id_secretaria in ('1800', '1851')
+            or p.id_empresa in (
+                '32',
+                '80',
+                '81',
+                '82',
+                '83',
+                '84',
+                '85',
+                '86',
+                '87',
+                '88',
+                '89',
+                '97',
+                '23'
+            )
 
         group by f.cpf
     )
