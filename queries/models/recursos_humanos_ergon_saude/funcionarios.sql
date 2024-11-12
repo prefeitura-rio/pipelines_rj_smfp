@@ -88,31 +88,35 @@ with
 
     funcionarios_saude as (
         select
-            f.id_funcionario,
             f.cpf,
-            f.nome,
-            case
-                when (p.provimento_fim is null) and (vv.data_vacancia is null)
-                then true
-                else false
-            end as status_ativo,
-            p.provimento_inicio,
-            p.provimento_fim,
-            vv.data_vacancia,
-            s.id_secretaria,
-            sec.secretaria_sigla,
-            sec.secretaria_nome,
-            p.id_empresa,
-            s.setor_nome,
-            s.setor_sigla,
-            s.setor_inicio,
-            s.setor_fim,
-            c.cargo_nome,
-            c.cargo_categoria,
-            c.cargo_subcategoria,
-            emp.empresa_nome,
-            emp.empresa_sigla,
-            emp.empresa_cnpj,
+            array_agg(
+                struct(
+                    f.id_funcionario,
+                    f.nome,
+                    case
+                        when (p.provimento_fim is null) and (vv.data_vacancia is null)
+                        then true
+                        else false
+                    end as status_ativo,
+                    p.provimento_inicio,
+                    p.provimento_fim,
+                    vv.data_vacancia,
+                    s.id_secretaria,
+                    sec.secretaria_sigla,
+                    sec.secretaria_nome,
+                    p.id_empresa,
+                    s.setor_nome,
+                    s.setor_sigla,
+                    s.setor_inicio,
+                    s.setor_fim,
+                    c.cargo_nome,
+                    c.cargo_categoria,
+                    c.cargo_subcategoria,
+                    emp.empresa_nome,
+                    emp.empresa_sigla,
+                    emp.empresa_cnpj
+                )
+            ) as dados,
             safe_cast(f.cpf as int64) as cpf_particao
         from funcionarios f
         left join provimento p on f.id_funcionario = p.id_funcionario
@@ -124,12 +128,14 @@ with
             and p.id_vinculo = vv.id_vinculo
         left join empresa emp on p.id_empresa = emp.id_empresa
         left join secretaria sec on s.id_secretaria = sec.id_secretaria
+
         where
             s.id_secretaria in ('1800')
             or p.id_empresa
             in ('32', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '97')
+
+        group by f.cpf
     )
 
 select *
 from funcionarios_saude
-where status_ativo

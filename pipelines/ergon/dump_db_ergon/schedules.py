@@ -608,7 +608,7 @@ ergon_clocks = generate_dump_db_schedules(
     dataset_id="recursos_humanos_ergon",
     infisical_secret_path="/db-ergon-prod",
     table_parameters=ergon_queries,
-    agent_label=constants.RJ_SMFP_AGENT_LABEL.value,
+    agent_label=[constants.RJ_SMFP_AGENT_LABEL.value],
 )
 
 ergon_monthly_update_schedule = Schedule(clocks=untuple(ergon_clocks))
