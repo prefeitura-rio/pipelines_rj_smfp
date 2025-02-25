@@ -22,13 +22,17 @@ from pipelines.sigma.dump_db_compras_materiais_airbyte.schedules import (
 )
 
 rj_smfp_dump_db_sigma_medicamentos_flow = deepcopy(templates__run_dbt_model__flow)
-rj_smfp_dump_db_sigma_medicamentos_flow.name = "SMFP: SIGMA - Compras Materiais Serviços - Materializar tabelas"
+rj_smfp_dump_db_sigma_medicamentos_flow.name = (
+    "SMFP: SIGMA - Compras Materiais Serviços - Materializar tabelas"
+)
 rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [
     handler_inject_bd_credentials,
     handler_initialize_sentry,
 ]
 rj_smfp_dump_db_sigma_medicamentos_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
-rj_smfp_dump_db_sigma_medicamentos_flow.run_config = KubernetesRun(image=constants.DOCKER_IMAGE.value)
+rj_smfp_dump_db_sigma_medicamentos_flow.run_config = KubernetesRun(
+    image=constants.DOCKER_IMAGE.value
+)
 
 rj_smfp_dump_db_sigma_medicamentos_default_parameters = {
     "dataset_id": "compras_materiais_servicos_sigma_airbyte",

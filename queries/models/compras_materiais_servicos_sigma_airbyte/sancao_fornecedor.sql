@@ -9,5 +9,5 @@ SELECT
   SAFE_CAST(DS_SANCAO AS STRING) AS descricao_sancao,
   SAFE_CAST(DT_SANCAO AS DATE) AS data_sancao,
   SAFE_CAST(DT_EXTINCAO_SANCAO AS DATE) AS data_extincao_sancao
-   
+
 FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_SANCAO_ADMINISTRATIVA` AS t

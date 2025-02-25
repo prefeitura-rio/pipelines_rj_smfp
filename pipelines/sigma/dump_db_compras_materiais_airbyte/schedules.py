@@ -42,7 +42,7 @@ smfp_compras_materiais_servicos_tables = {
     "fechamento_mensal_estoque": "fechamento_mensal_estoque",
     "posicao_fechada_estoque": "posicao_fechada_estoque",
     "material_em_transito": "material_em_transito",
-    "unidade_servico": "unidade_servico"
+    "unidade_servico": "unidade_servico",
 }
 
 compras_sigma_clocks = [
