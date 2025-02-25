@@ -3,7 +3,7 @@ SELECT
   SAFE_CAST(ano_mes_referencia AS STRING) AS ano_mes_referencia,
   SAFE_CAST(cd_material AS STRING) AS id_material,
   SAFE_CAST(tipo_movimentacao AS STRING) AS tipo_movimentacao,
-  SAFE_CAST(dt_movimento AS DATE) AS data_movimento,
+  SAFE_CAST(dt_movimento AS STRING) AS data_movimento,
   SAFE_CAST(cd_unidade_destino AS INT64) AS id_unidade_destino,
   SAFE_CAST(tp_documento AS STRING) AS tipo_documento,
   SAFE_CAST(num_doc_unidade_origem AS INT64) AS numero_documento_unidade_origem,
