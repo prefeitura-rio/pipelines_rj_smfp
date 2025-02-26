@@ -1,6 +1,6 @@
 version: 2
 models :
-  - name: classe
+  - name: classe_airbyte
     description: "**Descrição**: Classes de Material da Lista de Classificação\n**Frequência
       de atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -14,7 +14,7 @@ models :
         description: Descrição da classe
       - name: id_status
         description: Quais são os status disponíveis. 0 = Ativado e 2 = Desativado
-  - name: servico
+  - name: servico_airbyte
     description: "**Descrição**: Código de Serviço\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -59,7 +59,7 @@ models :
         description: Indica serviço Ativado ou Desativado
       - name: id_compras_net
         description: Código de serviço (Classificação Governo Federal)
-  - name: usuario_responsavel_auxiliar
+  - name: usuario_responsavel_auxiliar_airbyte
     description: "**Descrição**: Cadastro de Responsáveis de UAM\n**Frequência de
       atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -89,7 +89,7 @@ models :
         description: ESCOLARIDADE
       - name: curso_gestao_material
         description: STATUS DO CURSO DE GESTÃO
-  - name: material
+  - name: material_airbyte
     description: "**Descrição**: Cadastro de Material\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -156,7 +156,7 @@ models :
         description: Se o material está vinculado a tabela REMUME
       - name: id_compras_net
         description: Código do material (Classificação Governo Federal)
-  - name: usuario_sistema
+  - name: usuario_sistema_airbyte
     description: "**Descrição**: Usuários do SIGMA\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -211,7 +211,7 @@ models :
         description: Data da Última Sessão
       - name: hora_ultima_sessao
         description: Hora da Última Sessão
-  - name: ramo_atividade
+  - name: ramo_atividade_airbyte
     description: "**Descrição**: Cadastro do Ramo de Atividades\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -225,7 +225,7 @@ models :
           da Sociedade Civil - OSC'
       - name: situacao_ramo
         description: Indica se o cadastro está ativo
-  - name: unidade
+  - name: unidade_airbyte
     description: "**Descrição**: Unidade de Consumo\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -234,7 +234,7 @@ models :
         description: Código único dado, pela PCRJ, à unidade
       - name: descricao_unidade
         description: Descrição da unidade
-  - name: grupo
+  - name: grupo_airbyte
     description: "**Descrição**: Grupo da Lista de Classificação\n**Frequência de
       atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -247,7 +247,7 @@ models :
       - name: id_status
         description: Quais são os status existentes? E um caracter numérico. 0 = Ativado
           e 1 = Desativado
-  - name: fornecedor
+  - name: fornecedor_airbyte
     description: "**Descrição**: Registro dos Fornecedores - cadastro do dados dos
       fornecedores de bens e de serviços, submetidos ao processo formal de cadastramento,
       estão distribuídos em funcionais específicas no Sistema de Informações Gerenciais
@@ -342,7 +342,7 @@ models :
           , CNPJ (J) ou Estrangeiro (E).
       - name: nome_fantasia
         description: Nome de fantasia do fornecedor caso seja uma Pessoa Jurídica.
-  - name: orgao
+  - name: orgao_airbyte
     description: "**Descrição**: Cadastro de Órgão\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -391,7 +391,7 @@ models :
         description: Endereço do órgão
       - name: complemento_endereco
         description: Complemento do Endereço do órgão
-  - name: movimentacao
+  - name: movimentacao_airbyte
     description: "**Descrição**: Movimentação de Estoque\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -455,7 +455,7 @@ models :
           \n15\t\t                               Ajuste Contábil\r\n17\t\t       \
           \                        Desgaste\r\n19\t\t                            \
           \   Baixa"
-  - name: material_referencia
+  - name: material_referencia_airbyte
     description: "**Descrição**: Referência de Material\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -480,7 +480,7 @@ models :
         description: Código da Referência
       - name: descricao_referencia
         description: Descrição da Referência
-  - name: unidade_armazenadora
+  - name: unidade_armazenadora_airbyte
     description: "**Descrição**: Unidades Armazenadoras\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -523,7 +523,7 @@ models :
         description: NOME DO SUBSTITUTO 2
       - name: data_inicio_substituto_2
         description: DATA DO INÍCIO DO SUBSTITUTO 2
-  - name: subclasse
+  - name: subclasse_airbyte
     description: "**Descrição**: Subclasse das Classes da Lista de Classificação\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão
       gestor dos dados**: SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado
