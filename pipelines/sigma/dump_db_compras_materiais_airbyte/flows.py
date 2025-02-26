@@ -45,4 +45,4 @@ rj_smfp_dump_db_sigma_medicamentos_flow = set_default_parameters(
 )
 rj_smfp_dump_db_sigma_medicamentos_flow.schedule = compras_sigma_daily_update_schedule
 
-# comment to trigger build
+# comment to trigger build.
