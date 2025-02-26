@@ -42,7 +42,7 @@ smfp_compras_materiais_servicos_tables = {
     "fechamento_mensal_estoque": "fechamento_mensal_estoque_airbyte",
     "posicao_fechada_estoque": "posicao_fechada_estoque_airbyte",
     "material_em_transito": "material_em_transito_airbyte",
-    "unidade_servico": "unidade_servico_airbyte"
+    "unidade_servico": "unidade_servico_airbyte",
 }
 
 compras_sigma_clocks = [
