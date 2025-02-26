@@ -92,7 +92,7 @@ models :
         description: ESCOLARIDADE
       - name: curso_gestao_material
         description: STATUS DO CURSO DE GESTÃO
-      
+
   - name: material_airbyte
     description: "**Descrição**: Cadastro de Material\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
@@ -163,7 +163,7 @@ models :
       - name: observacao
         description: Observação (É um campo com 78 caracteres)
 
-     
+
   - name: usuario_sistema_airbyte
     description: "**Descrição**: Usuários do SIGMA\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
@@ -571,7 +571,7 @@ models :
         description: Quais são os status disponíveis. 3 = Desativado e 0 = Ativado
 
   - name: sancao_fornecedor_airbyte
-    description: "**Descrição**: Sanções administrativas aplicadas por não cumprimento 
+    description: "**Descrição**: Sanções administrativas aplicadas por não cumprimento
       de contrato a fornecedores contratados pelo município do Rio de Janeiro.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: A partir de 15/01/2007\n"
     columns:
