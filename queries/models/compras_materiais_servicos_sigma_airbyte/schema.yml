@@ -638,7 +638,7 @@ models :
       - name: id_unidade_destino
         description: Código da unidade armazenadora de destino.
       - name: tipo_documento
-        description: Tipo de documento, podendo ser: 'DRA', 'DRD', 'DRM', 'EAJ', 'INC', 'DDM', 'DTM', 'DSD', 'RIM', 'SAJ', 'DSG', 'SBX' ou 'XXX' quando não identificado.
+        description: Tipo de documento, podendo ser. 'DRA', 'DRD', 'DRM', 'EAJ', 'INC', 'DDM', 'DTM', 'DSD', 'RIM', 'SAJ', 'DSG', 'SBX' ou 'XXX' quando não identificado.
       - name: nota_fiscal_fornecedor
         description: Número da nota fiscal do fornecedor.
       - name: cnpj_fornecedor
