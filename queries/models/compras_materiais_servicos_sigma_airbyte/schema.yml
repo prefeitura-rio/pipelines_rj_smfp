@@ -632,7 +632,7 @@ models :
       - name: id_material
         description: Código do material.
       - name: tipo_movimentacao
-        description: Tipo de movimentação: 'E' para entrada, 'S' para saída, '*' para movimentação não identificada.
+        description: Tipo de movimentação.'E' para entrada, 'S' para saída, '*' para movimentação não identificada.
       - name: data_movimento
         description: Data da movimentação no formato AAAAMMDD.
       - name: id_unidade_destino
