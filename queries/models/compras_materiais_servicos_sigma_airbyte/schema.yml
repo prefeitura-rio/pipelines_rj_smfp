@@ -352,7 +352,7 @@ models :
 
 
       - name: tipo_cadastro_fornecedor
-        description: "EVENTUAL – pessoa física ou jurídica que transaciona com a Municipalidade,
+        description: "EVENTUAL - pessoa física ou jurídica que transaciona com a Municipalidade,
           sem que tenha se submetido ao processo formal de cadastramento, mas que
           para efeito de empenhamento e liquidação de despesa necessita constar do
           cadastro de favorecidos do Sistema de Contabilidade e Execução Orçamentária.
@@ -667,13 +667,13 @@ models :
       - name: id_material
         description: Código do material.
       - name: tipo_movimentacao
-        description: Tipo de movimentação: entrada = 'E', saída = 'S', não identificada = '*'.
+        description: Tipo de movimentação. entrada = 'E', saída = 'S', não identificada = '*'.
       - name: data_movimento
         description: Data da movimentação no formato AAAAMMDD.
       - name: id_unidade_destino
         description: Código da unidade armazenadora de destino.
       - name: tipo_documento
-        description: Tipos de documento: 'DRA', 'DRD', 'DRM', 'EAJ', 'INC', 'DDM', 'DTM', 'DSD', 'RIM', 'SAJ', 'DSG', 'SBX' ou 'XXX' quando não identificado.
+        description: Tipos de documento. 'DRA', 'DRD', 'DRM', 'EAJ', 'INC', 'DDM', 'DTM', 'DSD', 'RIM', 'SAJ', 'DSG', 'SBX' ou 'XXX' quando não identificado.
       - name: numero_documento_unidade_origem
         description: Número do documento da unidade armazenadora de origem.
       - name: quantidade_material_devolvida
@@ -776,13 +776,13 @@ models :
       - name: id_unidade_destino
         description: Código da unidade armazenadora de destino
       - name: tipo_documento
-        description: Tipos de documento: 'DDM', 'DTM' ou 'XXX' quando não identificado
+        description: Tipos de documento. 'DDM', 'DTM' ou 'XXX' quando não identificado
       - name: numero_documento_unidade_origem
         description: Número do documento da unidade armazenadora de origem
       - name: id_material
         description: Código do material
       - name: status_movimentacao
-        description: Status da movimentação: 'DOCTO EM ABERTO' ou 'DOCTO FECHADO, FV RESGATAR'
+        description: Status da movimentação. 'DOCTO EM ABERTO' ou 'DOCTO FECHADO, FV RESGATAR'
       - name: quantidade_material_transito
         description: Quantidade de material em trânsito
       - name: valor_unitario_material_transito
@@ -810,11 +810,11 @@ models :
       - name: id_porte_empresa
         description: Código do porte da empresa
       - name: descricao_porte_empresa
-        description: Descrição do código do porte da empresa: 00 – não informado, 01 – microempresa, 03 – empresa de pequeno porte, 05 – demais
+        description: Descrição do código do porte da empresa. 00 - não informado, 01 - microempresa, 03 - empresa de pequeno porte, 05 - demais
       - name: id_situacao_cadastral
         description: Código da situação cadastral do estabelecimento
       - name: descricao_situacao_cadastral
-        description: Descrição do código da situação cadastral do estabelecimento: 01 – nula, 2 – ativa, 3 – suspensa, 4 – inapta, 08 – baixada
+        description: Descrição do código da situação cadastral do estabelecimento. 01 - nula, 2 - ativa, 3 - suspensa, 4 - inapta, 08 - baixada
       - name: data_situacao_cadastral
         description: Data do último evento da situação cadastral do estabelecimento
 
