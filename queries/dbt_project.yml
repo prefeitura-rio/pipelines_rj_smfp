@@ -60,3 +60,6 @@ models:
     atividade_economica:
       +materialized: table
       +schema: atividade_economica
+    compras_materiais_servicos_sigma_airbyte:
+      +materialized: table
+      +schema: compras_materiais_servicos_sigma_airbyte
