@@ -1,7 +1,7 @@
 SELECT
-    SAFE_CAST(cd_orgao_designacao AS STRING) AS id_orgao_designacao,
-    SAFE_CAST(cd_perfil AS STRING) AS id_perfil,
-    SAFE_CAST(cd_terminal AS STRING) AS id_terminal,
+    SAFE_CAST(cd_orgao_designacao AS STRING) AS codigo_orgao_designacao,
+    SAFE_CAST(cd_perfil AS STRING) AS codigo_perfil,
+    SAFE_CAST(cd_terminal AS STRING) AS codigo_terminal,
     SAFE_CAST(cpf AS STRING) AS cpf_colaborador,
     SAFE_CAST(ds_orgao_designacao AS STRING) AS descricao_orgao_designacao,
     SAFE_CAST(ds_perfil AS STRING) AS descricao_perfil,

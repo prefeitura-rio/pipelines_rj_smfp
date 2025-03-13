@@ -31,7 +31,10 @@ rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [
 ]
 rj_smfp_dump_db_sigma_medicamentos_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
 rj_smfp_dump_db_sigma_medicamentos_flow.run_config = KubernetesRun(
-    image=constants.DOCKER_IMAGE.value
+    image=constants.DOCKER_IMAGE.value,
+    labels=[
+        constants.RJ_SMFP_AGENT_LABEL.value,
+    ],
 )
 
 rj_smfp_dump_db_sigma_medicamentos_default_parameters = {

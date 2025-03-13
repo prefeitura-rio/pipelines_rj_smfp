@@ -596,7 +596,7 @@ models :
       - name: data_extincao_sancao
         description: Data de extinção da sanção aplicada ao fornecedor Ex. Data do fim da suspensão, data da confirmação do pagamento da multa etc.
 
-  - name: responsavel_unidade_armazenador_airbyte
+  - name: responsavel_unidade_armazenadora_airbyte
     description: "**Descrição**: Responsáveis pelas Unidades Armazenadoras.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -721,7 +721,7 @@ models :
       - name: valor_total_material_estoque
         description: Valor total do material em estoque (quantidade em estoque x preço médio).
 
-  - name: fechamento_estoque_airbyte
+  - name: fechamento_mensal_estoque_airbyte
     description: "**Descrição**: Fechamento mensal do estoque.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
