@@ -27,7 +27,7 @@ smfp_compras_materiais_servicos_tables = {
     "grupo": "grupo_airbyte",
     "material": "material_airbyte",
     "ramo_atividade": "ramo_atividade_airbyte",
-    "servico": "servico_airbyte",
+    "servoco": "servoco_airbyte",
     "subclasse": "subclasse_airbyte",
     "unidade": "unidade_airbyte",
     "material_referencia": "material_referencia_airbyte",
