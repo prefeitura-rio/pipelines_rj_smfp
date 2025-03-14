@@ -20,7 +20,7 @@ from pipelines.constants import constants
 
 
 smfp_compras_materiais_servicos_tables = {
-    "sancao_fornecedor": "sancao_fornecedor",
+    "sancao_fornecedor": "sancao_fornecedor_compras",
     "movimentacao": "movimentacao",
     "classe": "classe",
     "fornecedor": "fornecedor",
