@@ -1,6 +1,6 @@
 version: 2
 models :
-  - name: classe_airbyte
+  - name: classe
     description: "**Descrição**: Classes de Material da Lista de Classificação\n**Frequência
       de atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -14,7 +14,7 @@ models :
         description: Descrição da classe
       - name: status
         description: Quais são os status disponíveis. 0 = Ativado e 2 = Desativado
-  - name: servico_airbyte
+  - name: servico
     description: "**Descrição**: Código de Serviço\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -62,7 +62,7 @@ models :
 
 
 
-  - name: usuario_responsavel_auxiliar_airbyte
+  - name: usuario_responsavel_auxiliar
     description: "**Descrição**: Cadastro de Responsáveis de UAM\n**Frequência de
       atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -93,7 +93,7 @@ models :
       - name: curso_gestao_material
         description: STATUS DO CURSO DE GESTÃO
 
-  - name: material_airbyte
+  - name: material
     description: "**Descrição**: Cadastro de Material\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -164,7 +164,7 @@ models :
         description: Observação (É um campo com 78 caracteres)
 
 
-  - name: usuario_sistema_airbyte
+  - name: usuario_sistema
     description: "**Descrição**: Usuários do SIGMA\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -220,7 +220,7 @@ models :
       - name: hora_ultima_sessao
         description: Hora da Última Sessão
 
-  - name: ramo_atividade_airbyte
+  - name: ramo_atividade
     description: "**Descrição**: Cadastro do Ramo de Atividades\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -235,7 +235,7 @@ models :
       - name: situacao_ramo
         description: Indica se o cadastro está ativo
 
-  - name: unidade_airbyte
+  - name: unidade
     description: "**Descrição**: Unidade de Consumo\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -246,7 +246,7 @@ models :
         description: Descrição da unidade
 
 
-  - name: grupo_airbyte
+  - name: grupo
     description: "**Descrição**: Grupo da Lista de Classificação\n**Frequência de
       atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
       SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado por (email)**:
@@ -261,7 +261,7 @@ models :
           e 1 = Desativado
 
 
-  - name: fornecedor_airbyte
+  - name: fornecedor
     description: "**Descrição**: Registro dos Fornecedores - cadastro do dados dos
       fornecedores de bens e de serviços, submetidos ao processo formal de cadastramento,
       estão distribuídos em funcionais específicas no Sistema de Informações Gerenciais
@@ -364,7 +364,7 @@ models :
 
 
 
-  - name: orgao_airbyte
+  - name: orgao
     description: "**Descrição**: Cadastro de Órgão\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -414,7 +414,7 @@ models :
       - name: data_cadastramento
         description: Data do Cadastramento
 
-  - name: movimentacao_airbyte
+  - name: movimentacao
     description: "**Descrição**: Movimentação de Estoque\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -480,7 +480,7 @@ models :
       - name: cnpj_fabricante
         description: CNPJ do Fabricante.
 
-  - name: material_referencia_airbyte
+  - name: material_referencia
     description: "**Descrição**: Referência de Material\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -507,7 +507,7 @@ models :
         description: Status
 
 
-  - name: unidade_armazenadora_airbyte
+  - name: unidade_armazenadora
     description: "**Descrição**: Unidades Armazenadoras\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
       por**: Fabio Barbosa Baptista\n**Publicado por (email)**: fabio.baptista@rio.rj.gov.br\n"
@@ -553,7 +553,7 @@ models :
 
 
 
-  - name: subclasse_airbyte
+  - name: subclasse
     description: "**Descrição**: Subclasse das Classes da Lista de Classificação\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão
       gestor dos dados**: SMFP\n**Publicado por**: Fabio Barbosa Baptista\n**Publicado
@@ -570,7 +570,7 @@ models :
       - name: status
         description: Quais são os status disponíveis. 3 = Desativado e 0 = Ativado
 
-  - name: sancao_fornecedor_airbyte
+  - name: sancao_fornecedor
     description: "**Descrição**: Sanções administrativas aplicadas por não cumprimento
       de contrato a fornecedores contratados pelo município do Rio de Janeiro.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: A partir de 15/01/2007\n"
@@ -596,7 +596,7 @@ models :
       - name: data_extincao_sancao
         description: Data de extinção da sanção aplicada ao fornecedor Ex. Data do fim da suspensão, data da confirmação do pagamento da multa etc.
 
-  - name: responsavel_unidade_armazenadora_airbyte
+  - name: responsavel_unidade_armazenadora
     description: "**Descrição**: Responsáveis pelas Unidades Armazenadoras.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -621,7 +621,7 @@ models :
       - name: data_inicio_substituto_2
         description: Data de início do substituto 2.
 
-  - name: movimento_estoque_airbyte
+  - name: movimento_estoque
     description: "**Descrição**: Movimento do estoque.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -656,7 +656,7 @@ models :
       - name: valor_acerto_preco_medio_unitario
         description: Valor de acerto do Preço Médio Unitário (PMU).
 
-  - name: devolucao_material_airbyte
+  - name: devolucao_material
     description: "**Descrição**: Devolução de material.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -683,7 +683,7 @@ models :
       - name: valor_total_material_devolvido
         description: Valor total do material devolvido (quantidade x valor unitário).
 
-  - name: saldo_mensal_estoque_airbyte
+  - name: saldo_mensal_estoque
     description: "**Descrição**: Saldo mensal do estoque.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -704,7 +704,7 @@ models :
       - name: quantidade_saida_material
         description: Quantidade de saídas do material para o ano-mês de referência na unidade armazenadora.
 
-  - name: posicao_fechada_estoque_airbyte
+  - name: posicao_fechada_estoque
     description: "**Descrição**: Posicao fechada do estoque.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -721,7 +721,7 @@ models :
       - name: valor_total_material_estoque
         description: Valor total do material em estoque (quantidade em estoque x preço médio).
 
-  - name: fechamento_mensal_estoque_airbyte
+  - name: fechamento_mensal_estoque
     description: "**Descrição**: Fechamento mensal do estoque.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -765,7 +765,7 @@ models :
         description: Saldo atual no mês-ano de referência para a unidade armazenadora.
 
 
-  - name: material_em_transito_airbyte
+  - name: material_em_transito
     description: "**Descrição**: Material em trânsito.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -788,7 +788,7 @@ models :
       - name: valor_unitario_material_transito
         description: Valor unitário do material em trânsito
 
-  - name: unidade_servico_airbyte
+  - name: unidade_servico
     description: "**Descrição**: Unidade de Serviço.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n"
     columns:
@@ -797,7 +797,7 @@ models :
       - name: descricao_unidade_servico
         description: Descrição da unidade de serviço
 
-  - name: porte_empresa_airbyte
+  - name: porte_empresa
     description: "**Descrição**: Dados do porte da empresa e situação cadastral do estabelecimento.\n
       **Frequência de atualização**: 1x mês\n"
     columns:
