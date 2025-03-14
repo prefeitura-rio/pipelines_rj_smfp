@@ -60,8 +60,6 @@ models :
       - name: situacao_cadastro_fornecedor
         description: Se o item é vinculado a tabela de fornecedor
 
-
-
   - name: usuario_responsavel_auxiliar
     description: "**Descrição**: Cadastro de Responsáveis de UAM\n**Frequência de
       atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**:
@@ -163,7 +161,6 @@ models :
       - name: observacao
         description: Observação (É um campo com 78 caracteres)
 
-
   - name: usuario_sistema
     description: "**Descrição**: Usuários do SIGMA\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
@@ -244,7 +241,6 @@ models :
         description: Código único dado, pela PCRJ, à unidade
       - name: descricao_unidade
         description: Descrição da unidade
-
 
   - name: grupo
     description: "**Descrição**: Grupo da Lista de Classificação\n**Frequência de
@@ -506,7 +502,6 @@ models :
       - name: status
         description: Status
 
-
   - name: unidade_armazenadora
     description: "**Descrição**: Unidades Armazenadoras\n**Frequência de atualização**:
       Diário\n**Cobertura temporal**: 1997\n**Órgão gestor dos dados**: SMFP\n**Publicado
@@ -551,8 +546,6 @@ models :
       - name: data_inicio_substituto_2
         description: DATA DO INÍCIO DO SUBSTITUTO 2
 
-
-
   - name: subclasse
     description: "**Descrição**: Subclasse das Classes da Lista de Classificação\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: 1997\n**Órgão
@@ -570,7 +563,7 @@ models :
       - name: status
         description: Quais são os status disponíveis. 3 = Desativado e 0 = Ativado
 
-  - name: sancao_fornecedor
+  - name: sancao_fornecedor_compras
     description: "**Descrição**: Sanções administrativas aplicadas por não cumprimento
       de contrato a fornecedores contratados pelo município do Rio de Janeiro.\n
       **Frequência de atualização**: Diário\n**Cobertura temporal**: A partir de 15/01/2007\n"
