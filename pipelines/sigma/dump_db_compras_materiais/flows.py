@@ -17,7 +17,7 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
 )
 
 from pipelines.constants import constants
-from pipelines.sigma.dump_db_compras_materiais_airbyte.schedules import (
+from pipelines.sigma.dump_db_compras_materiais.schedules import (
     compras_sigma_daily_update_schedule,
 )
 
