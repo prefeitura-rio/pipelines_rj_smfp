@@ -51,7 +51,7 @@ models :
       - name: codigo_subgrupo_cae
         description: Subgrupo de Atividade Econômica. Faz parte do Código de Atividade
           Econômica
-      - name: codigo_atividade_econômica
+      - name: codigo_atividade_economica
         description: Atividade Econômica. Incluído no código da atividade econômica
       - name: descricao_atividade_economica
         description: Descrição da Atividade Econômica
