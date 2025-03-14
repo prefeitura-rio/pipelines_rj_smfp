@@ -2,7 +2,7 @@ SELECT
   SAFE_CAST(CD_SERV AS STRING) AS codigo_servico,
   SAFE_CAST(CD_SEQ AS STRING) AS codigo_sequencia,
   SAFE_CAST(DV AS STRING) AS digito_verificador,
-  SAFE_CAST(CD_SERVICO AS STRING) AS codigo_servico,
+  SAFE_CAST(CD_SERVICO AS STRING) AS id_servico,
   SAFE_CAST(DS_SERVICO AS STRING) AS descricao_servico,
   SAFE_CAST(ST_STATUS AS STRING) AS status_servico,
   SAFE_CAST(CD_COMPRASNET AS STRING) AS codigo_compras_net,

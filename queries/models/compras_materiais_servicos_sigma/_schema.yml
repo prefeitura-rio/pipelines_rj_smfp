@@ -25,6 +25,8 @@ models :
         description: Código da Sequência (Código com 04 caracteres)
       - name: digito_verificador
         description: Digito Verificador (Código com 02 caracteres)
+      - name: id_servico
+        description: Código do Serviço (concatenação de codigo_servico, codigo sequencia e digito verificador)
       - name: descricao_servico
         description: Descrição do Serviço (Composto por 05 campos com 78 caracteres
           cada um)
