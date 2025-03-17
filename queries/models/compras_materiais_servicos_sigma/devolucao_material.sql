@@ -10,5 +10,5 @@ SELECT
   SAFE_CAST(quant AS FLOAT64) AS quantidade_material_devolvida,
   SAFE_CAST(valor_unitario AS FLOAT64) AS valor_unitario_material_devolvido,
   SAFE_CAST(vl_total AS FLOAT64) AS valor_total_material_devolvido
-  
+
 from {{ source('compras_materiais_servicos_sigma_staging', 'VW_DEVOLUCAO_MATERIAL')}}
