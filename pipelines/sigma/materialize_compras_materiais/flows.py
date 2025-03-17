@@ -17,35 +17,35 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
 )
 
 from pipelines.constants import constants
-from pipelines.sigma.dump_db_compras_materiais.schedules import (
+from pipelines.sigma.materialize_compras_materiais.schedules import (
     compras_sigma_daily_update_schedule,
 )
 
-rj_smfp_dump_db_sigma_medicamentos_flow = deepcopy(templates__run_dbt_model__flow)
-rj_smfp_dump_db_sigma_medicamentos_flow.name = (
+rj_smfp_materialize_sigma_medicamentos_flow = deepcopy(templates__run_dbt_model__flow)
+rj_smfp_materialize_sigma_medicamentos_flow.name = (
     "SMFP: SIGMA - Compras Materiais Serviços - Materializar tabelas"
 )
-rj_smfp_dump_db_sigma_medicamentos_flow.state_handlers = [
+rj_smfp_materialize_sigma_medicamentos_flow.state_handlers = [
     handler_inject_bd_credentials,
     handler_initialize_sentry,
 ]
-rj_smfp_dump_db_sigma_medicamentos_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
-rj_smfp_dump_db_sigma_medicamentos_flow.run_config = KubernetesRun(
+rj_smfp_materialize_sigma_medicamentos_flow.storage = GCS(constants.GCS_FLOWS_BUCKET.value)
+rj_smfp_materialize_sigma_medicamentos_flow.run_config = KubernetesRun(
     image=constants.DOCKER_IMAGE.value,
     labels=[
         constants.RJ_SMFP_AGENT_LABEL.value,
     ],
 )
 
-rj_smfp_dump_db_sigma_medicamentos_default_parameters = {
+rj_smfp_materialize_sigma_medicamentos_default_parameters = {
     "dataset_id": "compras_materiais_servicos_sigma",
     "upstream": True,
     "materialize_to_datario": False,
 }
-rj_smfp_dump_db_sigma_medicamentos_flow = set_default_parameters(
-    rj_smfp_dump_db_sigma_medicamentos_flow,
-    default_parameters=rj_smfp_dump_db_sigma_medicamentos_default_parameters,
+rj_smfp_materialize_sigma_medicamentos_flow = set_default_parameters(
+    rj_smfp_materialize_sigma_medicamentos_flow,
+    default_parameters=rj_smfp_materialize_sigma_medicamentos_default_parameters,
 )
-rj_smfp_dump_db_sigma_medicamentos_flow.schedule = compras_sigma_daily_update_schedule
+rj_smfp_materialize_sigma_medicamentos_flow.schedule = compras_sigma_daily_update_schedule
 
 # comment to trigger build.
