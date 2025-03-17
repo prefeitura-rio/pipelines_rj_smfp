@@ -22,4 +22,4 @@ SELECT
   SAFE_CAST(CEP AS INT64) AS cep,
   SAFE_CAST(ATIVO_INATIVO_BLOQUEADO AS STRING) AS status_fornecedor,
   SAFE_CAST(CD_NATUREZA_JURIDICA AS INT64) AS codigo_natureza_juridica
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_FORNECEDOR` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_FORNECEDOR')}}

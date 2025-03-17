@@ -29,4 +29,4 @@ SELECT
   SAFE_CAST(ST_TABELADO AS STRING) AS medicamento_tabelado,
   SAFE_CAST(ST_ITEM_SUSTENTAVEL AS STRING) AS item_sustentavel,
   SAFE_CAST(OBSERVACAO AS STRING) AS observacao
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_MATERIAL` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_MATERIAL')}}

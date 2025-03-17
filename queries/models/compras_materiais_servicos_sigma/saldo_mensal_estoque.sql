@@ -7,4 +7,4 @@ SELECT
   SAFE_CAST(quantidade AS FLOAT64) AS saldo_quantidade_material,
   SAFE_CAST(qtd_entrada AS FLOAT64) AS quantidade_entrada_material,
   SAFE_CAST(qtd_saida AS FLOAT64) AS quantidade_saida_material
-  FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_SALDO_MENSAL_ESTOQUE` AS t
+  from {{ source('compras_materiais_servicos_sigma_staging', 'VW_SALDO_MENSAL_ESTOQUE')}}

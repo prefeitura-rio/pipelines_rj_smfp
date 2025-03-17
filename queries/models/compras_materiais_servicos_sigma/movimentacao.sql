@@ -22,4 +22,5 @@ SELECT
     SAFE_CAST(serie AS STRING) AS serie_nota_fiscal,
     SAFE_CAST(total_item AS INT64) AS total_item,
     SAFE_CAST(tp_almoxarifado AS STRING) AS tipo_almoxarifado
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_MOVIMENTACAO` AS t
+
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_MOVIMENTACAO')}}

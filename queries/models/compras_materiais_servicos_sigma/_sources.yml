@@ -1,8 +1,9 @@
 version: 2
 
 sources:
-  - name: rj-smfp
-    database: compras_materiais_servicos_sigma_staging
+  - name: compras_materiais_servicos_sigma_staging
+    database: rj-smfp
+    schema: compras_materiais_servicos_sigma_staging
     tables:
       - name: VW_CLASSE
       - name: VW_DEVOLUCAO_MATERIAL

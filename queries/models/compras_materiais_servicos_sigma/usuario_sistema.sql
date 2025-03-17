@@ -24,4 +24,4 @@ SELECT
     SAFE_CAST(tel_alternativo2 AS STRING) AS telefone_alternativo_2,
     SAFE_CAST(tel_corporativo1 AS STRING) AS telefone_corporativo_1,
     SAFE_CAST(tel_corporativo2 AS STRING) AS telefone_corporativo_2,
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_USUARIO_SISTEMA` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_USUARIO_SISTEMA')}}

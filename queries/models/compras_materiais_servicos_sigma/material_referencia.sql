@@ -10,4 +10,4 @@ SELECT
     SAFE_CAST(sequencial AS STRING) AS sequencial_material,
     SAFE_CAST(st_status AS STRING) AS status,
 
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_MATERIAL_REFERENCIA` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_MATERIAL_REFERENCIA')}}

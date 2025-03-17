@@ -9,4 +9,4 @@ SELECT
     SAFE_CAST(st_status AS STRING) AS status_unidade_administrativa,
     SAFE_CAST(tp_almoxarifado AS STRING) AS tipo_almoxarifado,
     SAFE_CAST(tp_unidade_armazenadora AS STRING) AS tipo_unidade_armazenadora,
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_UNIDADE_ARMAZENADORA` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_UNIDADE_ARMAZENADORA')}}

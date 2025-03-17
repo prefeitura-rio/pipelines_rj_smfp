@@ -11,4 +11,4 @@ SELECT
     SAFE_CAST(nm_funcionario AS STRING) AS nome_funcionario,
     SAFE_CAST(st_curso_gestao_material AS STRING) AS curso_gestao_material,
     SAFE_CAST(tp_funcionario AS STRING) AS tipo_responsabilidade,
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_USUARIO_RESPONSAVEL_AUXILIAR` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_USUARIO_RESPONSAVEL_AUXILIAR')}}

@@ -21,4 +21,4 @@ SELECT
   SAFE_CAST(matricula_responsavel AS INT64) AS matricula_responsavel,
   SAFE_CAST(nm_responsavel AS STRING) AS nome_responsavel,
   SAFE_CAST(dt_responsavel AS STRING) AS data_cadastramento
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_ORGAO` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_ORGAO')}}

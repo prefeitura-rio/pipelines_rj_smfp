@@ -14,4 +14,4 @@ SELECT
   SAFE_CAST(valor_unitario AS FLOAT64) AS valor_unitario_material_movimentado,
   SAFE_CAST(vl_total AS FLOAT64) AS valor_total_material_movimentado,
   SAFE_CAST(acerto_pmu AS FLOAT64) AS valor_acerto_preco_medio_unitario
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_MOV_ESTOQUE` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_MOV_ESTOQUE')}}

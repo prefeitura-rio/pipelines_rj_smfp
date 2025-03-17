@@ -20,4 +20,4 @@ SELECT
   SAFE_CAST(residuo_contabil AS FLOAT64) AS residuo_contabil,
   SAFE_CAST(salto_atual AS FLOAT64) AS saldo_atual
 
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_FECHAMENTO_ESTOQUE` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_FECHAMENTO_ESTOQUE')}}

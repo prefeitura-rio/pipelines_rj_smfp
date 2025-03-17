@@ -4,4 +4,4 @@ SELECT
     SAFE_CAST(cd_subclasse AS STRING) AS codigo_subclasse,
     SAFE_CAST(ds_subclasse AS STRING) AS descricao_subclasse,
     SAFE_CAST(st_status AS STRING) AS id_status,
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_SUBCLASSE` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_SUBCLASSE')}}

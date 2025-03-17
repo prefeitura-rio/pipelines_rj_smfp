@@ -6,4 +6,4 @@ SELECT
   SAFE_CAST(preco_medio AS FLOAT64) AS preco_medio_material,
   SAFE_CAST(valor_estoque AS FLOAT64) AS valor_total_material_estoque
 
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_POSICAO_FECHADA_ESTOQUE` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_POSICAO_FECHADA_ESTOQUE')}}

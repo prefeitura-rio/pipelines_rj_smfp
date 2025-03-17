@@ -8,4 +8,4 @@ SELECT
   SAFE_CAST(st_movimentacao AS STRING) AS status_movimentacao,
   SAFE_CAST(quantidade AS FLOAT64) AS quantidade_material_transito,
   SAFE_CAST(valor_unitario AS FLOAT64) AS valor_unitario_material_transito
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.VW_MATERIAL_EM_TRANSITO` AS t
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_MATERIAL_EM_TRANSITO')}}
