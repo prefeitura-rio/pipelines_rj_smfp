@@ -1,5 +1,5 @@
 SELECT
-    SAFE_CAST(REGEXP_REPLACE(TRIM(cd_grupo), r'\.0$', '') AS STRING) AS id_grupo,
-    SAFE_CAST(TRIM(ds_grupo) AS STRING) AS descricao_grupo,
-    SAFE_CAST(REGEXP_REPLACE(TRIM(st_status), r'\.0$', '') AS STRING) AS id_status,
-FROM `rj-smfp.compras_materiais_servicos_sigma_staging.grupo` AS t
+    SAFE_CAST(cd_grupo AS STRING) AS codigo_grupo,
+    SAFE_CAST(ds_grupo AS STRING) AS descricao_grupo,
+    SAFE_CAST(st_status AS STRING) AS status
+from {{ source('compras_materiais_servicos_sigma_staging', 'VW_GRUPO')}}
