@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-DBT flows for SMFP SIGMA COMPRAS MATERIAIS.
+DBT flows for SMFP SIGMA COMPRAS MATERIAIS
 """
 
 from copy import deepcopy
