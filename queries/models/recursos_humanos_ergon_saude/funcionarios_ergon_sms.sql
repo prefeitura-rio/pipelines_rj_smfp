@@ -6,7 +6,7 @@ WITH all_cpf AS (
     SELECT
         cpf,
         'sms' AS origin
-    FROM `rj-sms.saude_dados_mestres.profissional_saude`
+    FROM `rj-sms.recursos_humanos_ergon_saude.profissional_saude`
     WHERE cpf IS NOT NULL
     UNION ALL
     SELECT
