@@ -15,7 +15,7 @@ with
             f.id_vinculo as id_funcionario,
             lpad(f.id_cpf, 11, '0') as cpf,  -- Adiciona zero à esquerda caso o CPF tenha menos de 11 dígitos
             f.nome
-        from `rj-smfp.recursos_humanos_ergon.funcionario` f
+        from `rj-smfp.brutos_ergon.funcionario` f
         where f.id_cpf is not null  -- and lpad(f.id_cpf, 11, '0') in ('')
     ),
 
@@ -28,7 +28,7 @@ with
             p.id_setor,
             p.id_cargo,
             p.empresa_vinculo as id_empresa
-        from `rj-smfp.recursos_humanos_ergon.provimento` p
+        from `rj-smfp.brutos_ergon.provimento` p
         -- get the most recent id_vinculo
         qualify
             row_number() over (
@@ -46,7 +46,7 @@ with
             nome as setor_nome,
             sigla as setor_sigla,
             id_secretaria
-        from `rj-smfp.recursos_humanos_ergon.setor`
+        from `rj-smfp.brutos_ergon.setor`
         -- get the most recent of the setor
         qualify row_number() over (partition by id_setor order by data_inicio desc) = 1
     ),
@@ -57,12 +57,12 @@ with
             nome as cargo_nome,
             categoria as cargo_categoria,
             subcategoria as cargo_subcategoria,
-        from `rj-smfp.recursos_humanos_ergon.cargo`
+        from `rj-smfp.brutos_ergon.cargo`
     ),
 
     vacancia_vinculo as (
         select id_funcionario, id_vinculo, data_vacancia
-        from `rj-smfp.recursos_humanos_ergon.vinculo`
+        from `rj-smfp.brutos_ergon.vinculo`
     -- get the most recent id_vinculo
     -- qualify
     -- row_number() over (partition by id_funcionario order by id_vinculo desc) = 1
@@ -74,7 +74,7 @@ with
             nome_empresa as empresa_nome,
             sigla as empresa_sigla,
             cnpj as empresa_cnpj
-        from `rj-smfp.recursos_humanos_ergon.empresas`
+        from `rj-smfp.brutos_ergon.empresas`
     ),
 
     secretaria as (
