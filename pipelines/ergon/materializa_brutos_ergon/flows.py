@@ -17,8 +17,8 @@ from prefeitura_rio.pipelines_utils.state_handlers import (
 )
 
 from pipelines.constants import constants
-from pipelines.ergon.materializa_funcionarios_saude.schedules import (
-    smfp_funcionarios_saude_daily_update_schedule,
+from pipelines.ergon.materializa_brutos_ergon.schedules import (
+    smfp_brutos_ergon_daily_update_schedule,
 )
 
 run_dbt_brutos_ergon = deepcopy(templates__run_dbt_model__flow)
@@ -41,4 +41,4 @@ run_dbt_brutos_ergon = set_default_parameters(
     default_parameters=smfp_brutos_ergon_default_parameters,
 )
 
-run_dbt_brutos_ergon.schedule = smfp_funcionarios_saude_daily_update_schedule
+run_dbt_brutos_ergon.schedule = smfp_brutos_ergon_daily_update_schedule

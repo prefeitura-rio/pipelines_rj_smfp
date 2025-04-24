@@ -22,7 +22,7 @@ tables = [
 ]
 
 
-smfp_funcionarios_saude_clocks = [
+brutos_ergon_clocks = [
     IntervalClock(
         interval=timedelta(days=1),
         start_date=datetime(2021, 11, 5, 0, 0, tzinfo=pytz.timezone("America/Sao_Paulo"))
@@ -37,6 +37,4 @@ smfp_funcionarios_saude_clocks = [
     )
     for count, parameter in enumerate(tables)
 ]
-smfp_funcionarios_saude_daily_update_schedule = Schedule(
-    clocks=untuple(smfp_funcionarios_saude_clocks)
-)
+smfp_brutos_ergon_daily_update_schedule = Schedule(clocks=untuple(brutos_ergon_clocks))
