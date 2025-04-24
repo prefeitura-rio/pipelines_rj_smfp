@@ -1,3 +1,10 @@
+{{
+    config(
+        alias='empresas',
+        schema='brutos_ergon'
+    )
+}}
+
 SELECT
     SAFE_CAST(REGEXP_REPLACE(CAST(t.EMPRESA AS STRING), r'\.0$', '') AS STRING) AS id_empresa,
     SAFE_CAST(t.NOME AS STRING) AS nome_empresa,
