@@ -6,13 +6,13 @@ WITH all_cpf AS (
     SELECT
         cpf,
         'sms' AS origin
-    FROM `rj-sms.saude_dados_mestres.profissional_saude`
+    FROM `rj-sms.recursos_humanos_ergon_saude.profissional_saude`
     WHERE cpf IS NOT NULL
     UNION ALL
     SELECT
         cpf,
         'ergon' AS origin
-    FROM `rj-smfp.brutos_ergon_saude.funcionarios_ativos`
+    FROM `rj-smfp.recursos_humanos_ergon_saude.funcionarios_ativos`
     WHERE cpf IS NOT NULL
   )
 ),
@@ -33,7 +33,7 @@ funcionarios AS (
   FROM all_cpf cpf
   LEFT JOIN `rj-sms.saude_dados_mestres.profissional_saude` ps
     ON cpf.cpf = ps.cpf
-  LEFT JOIN `rj-smfp.brutos_ergon_saude.funcionarios_ativos` fa
+  LEFT JOIN `rj-smfp.recursos_humanos_ergon_saude.funcionarios_ativos` fa
     ON cpf.cpf = fa.cpf
 ),
 
