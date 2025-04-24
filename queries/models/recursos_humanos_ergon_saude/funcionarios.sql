@@ -9,6 +9,8 @@
     )
 }}
 
+
+
 with
     funcionarios as (
         select
@@ -79,10 +81,12 @@ with
 
     secretaria as (
         select
-            id_unidade_administrativa as id_secretaria,
-            sigla_unidade_administrativa as secretaria_sigla,
-            nome_unidade_administrativa as secretaria_nome
-        from `rj-iplanrio.unidades_administrativas.orgaos`
+            safe_cast(regexp_replace(cd_ua, r'\.0$', '') as string) as id_secretaria,
+            safe_cast(
+                regexp_replace(sigla_ua, r'\.0$', '') as string
+            ) as secretaria_sigla,
+            safe_cast(regexp_replace(nome_ua, r'\.0$', '') as string) as secretaria_nome
+        from `rj-iplanrio.unidades_administrativas_staging.orgaos`
     ),
 
     funcionarios_saude as (
@@ -149,5 +153,8 @@ with
         group by f.cpf
     )
 
-select *
+select
+    *,
+    FORMAT_TIMESTAMP("%Y-%m-%d %H:%M:%S", CURRENT_TIMESTAMP(), "America/Sao_Paulo") as updated_at
 from funcionarios_saude
+
