@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-DBT-related flows for EGPWeb Dashboard de Metas.
+DBT-related flows for EGPWeb Dashboard de Metas
 """
 
 from copy import deepcopy

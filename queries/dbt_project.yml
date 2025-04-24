@@ -60,3 +60,6 @@ models:
     atividade_economica:
       +materialized: table
       +schema: atividade_economica
+    brutos_ergon:
+      +materialized: table
+      +schema: brutos_ergon

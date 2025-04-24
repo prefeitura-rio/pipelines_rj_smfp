@@ -15,7 +15,7 @@ with
             f.id_vinculo as id_funcionario,
             lpad(f.id_cpf, 11, '0') as cpf,  -- Adiciona zero à esquerda caso o CPF tenha menos de 11 dígitos
             f.nome
-        from `rj-smfp.recursos_humanos_ergon.funcionario` f
+        from `rj-smfp.brutos_ergon.funcionario` f
         where f.id_cpf is not null  -- and lpad(f.id_cpf, 11, '0') in ('')
     ),
 
@@ -28,7 +28,7 @@ with
             p.id_setor,
             p.id_cargo,
             p.empresa_vinculo as id_empresa
-        from `rj-smfp.recursos_humanos_ergon.provimento` p
+        from `rj-smfp.brutos_ergon.provimento` p
         -- get the most recent id_vinculo
         qualify
             row_number() over (
@@ -46,7 +46,7 @@ with
             nome as setor_nome,
             sigla as setor_sigla,
             id_secretaria
-        from `rj-smfp.recursos_humanos_ergon.setor`
+        from `rj-smfp.brutos_ergon.setor`
         -- get the most recent of the setor
         qualify row_number() over (partition by id_setor order by data_inicio desc) = 1
     ),
@@ -57,12 +57,12 @@ with
             nome as cargo_nome,
             categoria as cargo_categoria,
             subcategoria as cargo_subcategoria,
-        from `rj-smfp.recursos_humanos_ergon.cargo`
+        from `rj-smfp.brutos_ergon.cargo`
     ),
 
     vacancia_vinculo as (
         select id_funcionario, id_vinculo, data_vacancia
-        from `rj-smfp.recursos_humanos_ergon.vinculo`
+        from `rj-smfp.brutos_ergon.vinculo`
     -- get the most recent id_vinculo
     -- qualify
     -- row_number() over (partition by id_funcionario order by id_vinculo desc) = 1
@@ -74,15 +74,17 @@ with
             nome_empresa as empresa_nome,
             sigla as empresa_sigla,
             cnpj as empresa_cnpj
-        from `rj-smfp.recursos_humanos_ergon.empresas`
+        from `rj-smfp.brutos_ergon.empresas`
     ),
 
     secretaria as (
         select
-            id_unidade_administrativa as id_secretaria,
-            sigla_unidade_administrativa as secretaria_sigla,
-            nome_unidade_administrativa as secretaria_nome
-        from `rj-iplanrio.unidades_administrativas.orgaos`
+            safe_cast(regexp_replace(cd_ua, r'\.0$', '') as string) as id_secretaria,
+            safe_cast(
+                regexp_replace(sigla_ua, r'\.0$', '') as string
+            ) as secretaria_sigla,
+            safe_cast(regexp_replace(nome_ua, r'\.0$', '') as string) as secretaria_nome
+        from `rj-iplanrio.unidades_administrativas_staging.orgaos`
     ),
 
     funcionarios_saude as (
@@ -142,6 +144,10 @@ with
             )
     )
 
-select *
+select
+    *,
+    format_timestamp(
+        "%Y-%m-%d %H:%M:%S", current_timestamp(), "America/Sao_Paulo"
+    ) as updated_at
 from funcionarios_saude
 where status_ativo
