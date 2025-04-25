@@ -12,3 +12,4 @@ from pipelines.iptu_inad import *  # noqa
 from pipelines.receita_federal_cnpj import *  # noqa
 from pipelines.sigma import *  # noqa
 from pipelines.templates import *  # noqa
+from pipelines.dbt_transform import *  # noqa

@@ -22,3 +22,7 @@ class constants(Enum):
     ######################################
     # Other constants
     ######################################
+
+    # DBT TRANSFORM
+    GCS_BUCKET = {"prod": "rj-smfp_dbt", "dev": "rj-smfp-dev_dbt"}
+    REPOSITORY_URL = "https://github.com/prefeitura-rio/queries-rj-smfp.git"
