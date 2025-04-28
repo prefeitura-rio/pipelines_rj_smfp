@@ -3,6 +3,7 @@
 Imports all flows for every project so we can register all of them...
 """
 from pipelines.atividade_economica import *  # noqa
+from pipelines.dbt_transform import *  # noqa
 from pipelines.egpweb_metas import *  # noqa
 from pipelines.ergon import *  # noqa
 from pipelines.ergon_comlurb import *  # noqa

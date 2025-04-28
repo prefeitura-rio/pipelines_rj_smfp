@@ -9,12 +9,15 @@ dbt-bigquery = "^1.6.1"
 google-cloud-storage = "^2.10.0"
 pendulum = "^3.0.0"
 prefect = "1.4.1"
-prefeitura-rio = {git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "160482553d61658da753b5da8261f9e993a28a74", extras = [
+prefeitura-rio = {git = "https://github.com/prefeitura-rio/prefeitura-rio", rev = "df7665fe952ab0c127ac5b1caba2942262e4f90e", extras = [
   "pipelines",
   "pipelines-templates",
   "actions",
 ]}
 python = ">=3.10,<3.11"
+git-python = "^1.0.3"
+aiohttp = "^3.11.18"
+discord = "^2.3.2"
 
 [tool.poetry.group.dev]
 optional = true
